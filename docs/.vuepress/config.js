@@ -6,13 +6,8 @@
 //Markdown 配置文件
 const markdownConfig = require('./config/markdownConfig.js')
 
-
-//页面顶部导航配置文件
-const navData = require('./config/navData.json')
-
-
-//页面侧边导航配置文件
-var sidebarData = require('./config/sidebarData.json')
+//页面导航配置文件
+const mainNavData = require('./config/mainNavData.js')
 
 
 module.exports = {
@@ -21,11 +16,10 @@ module.exports = {
     base:'/',
     themeConfig: {
       edition: 'v2',
-      nav: navData,
-      sidebar: sidebarData,
+      mainNav: mainNavData,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg', 
       logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
-      favicon: '',
+      favicon: ' ',
     },
     markdown: markdownConfig,
     /* head: [

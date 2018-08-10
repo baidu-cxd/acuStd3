@@ -4,8 +4,9 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Nav/>
-    <div class="main-wrp">
+    <Nav v-if="shouldShowNav"/>
+    <Home v-if="$page.frontmatter.home"/>
+    <div v-else class="main-wrp">
       <div class="page-wrp">
         <Page/>
         <PrevNext/>
@@ -42,6 +43,10 @@ export default {
       if (themeConfig.edition === 'v2') return themeConfig.edition
       return 'v1'
     },
+    shouldShowNav () {
+      if (this.$page.frontmatter.home) return false
+      return true
+    },
     subSidebarItems () {
       return resolveSubSidebarItems(
         this.$page,
@@ -56,7 +61,8 @@ export default {
         {
           'sidebar-hidden': this.isSidebarHidden,
         },
-        userPageClass
+        userPageClass,
+        this.$page.frontmatter.home? 'home' : ' '
       ]
     }
   },

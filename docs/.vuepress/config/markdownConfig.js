@@ -1,3 +1,8 @@
+/**
+ * @file markdownConfig.js
+ * @author wangyihan05@baidu.com
+ */
+
 const markdownConfig = {
     // markdown-it-toc 的选项
     toc: { includeLevel: [2] },

@@ -1,0 +1,58 @@
+/*
+/* name: article.styl
+/* author: DZ(wangyihan05@baidu.com)
+*/
+
+// 配置文件
+@import './config'
+$to-top = 40px
+$h1-margin = 50px
+$h2-margin = 40px
+$h3-margin = 30px
+$h4-margin = 20px
+$h5-margin = 20px
+
+// 字号行高配置文件在 config.styl 中，使用 extend 引入
+
+// 样式
+.article
+  h1, h2, h3, h4, h5, p
+    font-family -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica, "PingFang SC", Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif
+    -moz-osx-font-smoothing grayscale
+    -webkit-font-smoothing antialiased
+  h1, h2, h3, h4, h5
+    font-weight 500
+    color $text-black-heading
+    a
+      font-size 1em
+  p, ul, li, ol
+    font-weight 400
+    color $text-black-std
+    @extend .p-size-std
+  ul, li
+    margin 0
+  a
+    font-weight 400
+    color $link-color
+    text-decoration none
+    @extend .p-size-std
+  h1
+    padding-top $to-top + $h1-margin
+    margin-top - $to-top 
+    margin-bottom 30px
+    @extend .h1-size-std
+  h2
+    padding-top $to-top + $h2-margin
+    margin-top - $to-top 
+    margin-bottom 20px
+    @extend .h2-size-small
+  h3
+    padding-top $to-top + $h3-margin
+    margin-top - $to-top 
+    margin-bottom 10px
+    @extend .h3-size-std
+  h4
+    padding-top $to-top + $h4-margin
+    margin-top - $to-top 
+    margin-bottom 10px
+    @extend .h4-size-std

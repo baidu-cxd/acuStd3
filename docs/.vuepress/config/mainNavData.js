@@ -1,4 +1,9 @@
-[
+/**
+ * @file mainNavData.js
+ * @author wangyihan05@baidu.com
+ */
+
+const mainNavData = [
   { 
     "text": "Portal 门户", 
     "link": "/portal/" ,
@@ -20,3 +25,4 @@
     "icon": "http://yihan.gz.bcebos.com/icon16.png"
   }
 ]
+module.exports = mainNavData;

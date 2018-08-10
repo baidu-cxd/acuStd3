@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    这是页面内容
+    <Content :custom="false" class="article"/>
   </div>
 </template>
 
