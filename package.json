@@ -3,7 +3,19 @@
     "vuepress": "^0.14.1"
   },
   "dependencies": {
-
+    "clipboard": "^2.0.1",
+    "gulp-less": "^3.5.0",
+    "less-loader": "^4.1.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-footnote": "^3.0.1",
+    "node-sass": "^4.9.0",
+    "san": "^3.5.7",
+    "san-xui": "^0.2.0",
+    "sass-loader": "^7.0.1",
+    "smoothscroll-polyfill": "^0.4.3",
+    "underscore": "^1.9.0"
   },
   "scripts": {
     "test": "vuepress dev docs",
