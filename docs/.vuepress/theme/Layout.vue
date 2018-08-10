@@ -27,8 +27,7 @@ import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
-import { pathToComponentName } from '@app/util'
-import { resolveSidebarItems } from './util'
+import { pathToComponentName, resolveSidebarItems } from './util'  
 
 export default {
   components: { Home, Page, Sidebar, Navbar },
@@ -113,8 +112,8 @@ export default {
     nprogress.configure({ showSpinner: false })
 
     this.$router.beforeEach((to, from, next) => {
-      if (to.path !== from.path && !Vue.component(pathToComponentName(to.path))) {
-        nprogress.start()
+      if (to.path !== from.path && !Vue.component(pathToComponentName(to.path))) {  先把报错的地方禁用一下不知道会发生什么
+      nprogress.start()
       }
       next()
     })
