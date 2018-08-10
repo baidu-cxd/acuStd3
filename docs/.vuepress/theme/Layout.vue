@@ -21,13 +21,14 @@
 </template>
 
 <script>
+// v2 版本
 import Vue from 'vue'
 import nprogress from 'nprogress'
-import Home from './Home.vue'
-import Navbar from './Navbar.vue'
-import Page from './Page.vue'
-import Sidebar from './Sidebar.vue'
-import { pathToComponentName, resolveSidebarItems } from './util'  
+import Home from './v2/Home.vue'
+import Navbar from './v2/Navbar.vue'
+import Page from './v2/Page.vue'
+import Sidebar from './v2/Sidebar.vue'
+import { pathToComponentName, resolveSidebarItems } from './v2/util'  
 
 export default {
   components: { Home, Page, Sidebar, Navbar },
@@ -173,4 +174,4 @@ function updateMetaTags (meta, current) {
 </script>
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
-<style src="./styles/theme.styl" lang="stylus"></style>
+<style src="./v2/styles/theme.styl" lang="stylus"></style>
