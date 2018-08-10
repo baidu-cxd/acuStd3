@@ -1,6 +1,6 @@
 const markdownConfig = {
     // markdown-it-toc 的选项
-    /* toc: { includeLevel: [2] },
+    toc: { includeLevel: [2] },
     config: md => {
       // 使用更多的 markdown-it 插件!
       md.use(require('markdown-it-footnote')),
@@ -103,9 +103,32 @@ const markdownConfig = {
           }
         }
       });
+      md.use(require('markdown-it-container'), 'raw-end', {
+        validate: function(params) {
+          return params.trim().match(/^raw-end\s+(.*)$/);
+        },
+        render: function (tokens, idx) {
+          if (tokens[idx].nesting === 1) {
+            return '</div>\n'
+          } else {
+            return ' ';
+          }
+        }
+      });
+      md.use(require('markdown-it-container'), 'col-end', {
+        validate: function(params) {
+          return params.trim().match(/^col-end\s+(.*)$/);
+        },
+        render: function (tokens, idx) {
+          if (tokens[idx].nesting === 1) {
+            return '</div>\n'
+          } else {
+            return ' ';
+          }
+        }
+      });
       md.use(require('markdown-it-abbr'));
     }
-    */
   }
 
   module.exports = markdownConfig;
