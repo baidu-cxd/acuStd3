@@ -1,5 +1,6 @@
 <template>
-  <div class="theme-container"
+  <div class="theme-container v2"
+    v-if="edition === 'v2'"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
@@ -39,6 +40,13 @@ export default {
   },
 
   computed: {
+    edition () {
+      const { frontmatter } = this.$page
+      const { themeConfig } = this.$site
+      if (frontmatter.edition === 'v2') return frontmatter.edition
+      if (themeConfig.edition === 'v2') return themeConfig.edition
+      return 'v1'
+    },
     shouldShowNavbar () {
       const { themeConfig } = this.$site
       const { frontmatter } = this.$page

@@ -20,14 +20,15 @@ module.exports = {
     description: '百度云设计规范',
     base:'/',
     themeConfig: {
+      edition: 'v2',
       nav: navData,
       sidebar: sidebarData,
-      logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg',
-      logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg',
+      logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg', 
+      logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
       favicon: '',
     },
     markdown: markdownConfig,
-    head: [
+    /* head: [
       ['script', {}, `(function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:927245,hjsv:6};
@@ -36,5 +37,5 @@ module.exports = {
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`]
-    ]
+    ] */
 }
