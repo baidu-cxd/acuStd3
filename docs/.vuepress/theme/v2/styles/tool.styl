@@ -1,0 +1,33 @@
+/*
+/* name: tool.styl
+/* author: DZ(wangyihan05@baidu.com)
+*/
+
+
+// 清除浮动
+.clear-float
+  &:after
+    content:"."; 
+    display:block; 
+    height:0; 
+    visibility:hidden; 
+    clear:both;
+
+// 纵向居中 @extend .v-middle 使用
+.v-middle
+  position absolute
+  top 50%
+  transform translateY(-50%)
+
+// 水平居中 @extend .w-middle 使用
+.w-middle
+  position absolute
+  left 50%
+  transform translateX(-50%)
+
+// 双向居中 @extend .all-middle 使用
+.all-middle
+  position absolute
+  left 50%
+  top 50%
+  transform translate(-50%, -50%)
