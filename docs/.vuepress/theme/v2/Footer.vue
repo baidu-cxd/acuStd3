@@ -1,11 +1,11 @@
 <template>
-  <div class="page">
-    这是页面内容
+  <div class="footer">
+    这是footer
   </div>
 </template>
 
 <script>
 export default {
-  name : 'Page'
+  name : 'Footer'
 }
 </script>

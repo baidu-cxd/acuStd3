@@ -1,23 +1,17 @@
 <template>
   <div class="theme-container v2"
-    v-if="edition === 'v2'"
+    v-else-if="edition === 'v2'"
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
-    <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <slot name="sidebar-top" slot="top"/>
-      <slot name="sidebar-bottom" slot="bottom"/>
-    </Sidebar>
-    <div class="custom-layout" v-if="$page.frontmatter.layout">
-      <component :is="$page.frontmatter.layout"/>
+    <Nav/>
+    <div class="main-wrp">
+      <div class="page-wrp">
+        <Page/>
+        <PrevNext/>
+      </div>
     </div>
-    <Home v-else-if="$page.frontmatter.home"/>
-    <Page v-else :sidebar-items="sidebarItems">
-      <slot name="page-top" slot="top"/>
-      <slot name="page-bottom" slot="bottom"/>
-    </Page>
+    <Footer/>
   </div>
 </template>
 
@@ -26,16 +20,17 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import Home from './v2/Home.vue'
-import Navbar from './v2/Navbar.vue'
+import Nav from './v2/Nav.vue'
 import Page from './v2/Page.vue'
-import Sidebar from './v2/Sidebar.vue'
-import { pathToComponentName, resolveSidebarItems } from './v2/util'  
+import PrevNext from './v2/PrevNext.vue'
+import Footer from './v2/Footer.vue'
+import { pathToComponentName, resolveSubSidebarItems } from './v2/util'  
 
 export default {
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Home, Page, PrevNext, Nav, Footer },
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarHidden: false
     }
   },
 
@@ -47,30 +42,8 @@ export default {
       if (themeConfig.edition === 'v2') return themeConfig.edition
       return 'v1'
     },
-    shouldShowNavbar () {
-      const { themeConfig } = this.$site
-      const { frontmatter } = this.$page
-      if (frontmatter.navbar === false) return false
-      return (
-        this.$title ||
-        themeConfig.logo ||
-        themeConfig.repo ||
-        themeConfig.nav ||
-        this.$themeLocaleConfig.nav
-      )
-    },
-    shouldShowSidebar () {
-      const { themeConfig } = this.$site
-      const { frontmatter } = this.$page
-      return (
-        !frontmatter.layout &&
-        !frontmatter.home &&
-        frontmatter.sidebar !== false &&
-        this.sidebarItems.length
-      )
-    },
-    sidebarItems () {
-      return resolveSidebarItems(
+    subSidebarItems () {
+      return resolveSubSidebarItems(
         this.$page,
         this.$route,
         this.$site,
@@ -81,9 +54,7 @@ export default {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
         {
-          'no-navbar': !this.shouldShowNavbar,
-          'sidebar-open': this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar,
+          'sidebar-hidden': this.isSidebarHidden,
         },
         userPageClass
       ]
@@ -121,7 +92,7 @@ export default {
     nprogress.configure({ showSpinner: false })
 
     this.$router.beforeEach((to, from, next) => {
-      if (to.path !== from.path && !Vue.component(pathToComponentName(to.path))) {  先把报错的地方禁用一下不知道会发生什么
+      if (to.path !== from.path && !Vue.component(pathToComponentName(to.path))) {
       nprogress.start()
       }
       next()
@@ -139,7 +110,7 @@ export default {
 
   methods: {
     toggleSidebar (to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      this.isSidebarHidden = typeof to === 'boolean' ? to : !this.isSidebarHidden
     },
     // side swipe
     onTouchStart (e) {

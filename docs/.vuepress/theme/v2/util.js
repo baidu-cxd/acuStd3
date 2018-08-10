@@ -26,6 +26,14 @@ export function findPageForPath (pages, path) {
   }
 }
 
+// v2 对应函数
+
+export function resolveSubSidebarItems (page, route, site, localePath){
+  return []
+}
+
+// 原有
+
 export function normalize (path) {
   return path
     .replace(hashRE, '')
