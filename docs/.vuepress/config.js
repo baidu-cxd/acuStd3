@@ -1,6 +1,6 @@
 /**
  * @file config.js
- * @author wangyihan05@baidu.com
+ * @author DZ(wangyihan05@baidu.com)
  */
 
 //Markdown 配置文件

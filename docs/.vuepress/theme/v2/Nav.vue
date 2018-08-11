@@ -12,16 +12,24 @@
             :src="$withBase($site.themeConfig.logo)">
         </router-link>
       </div>
+      <!--主导航--> 
     </div>
   </div>
 </template>
 
 <script>
 import NavController from './NavController.vue'
+import NavLink from './NavLink.vue'
+import { resolveNavLinkItem } from './util'
 export default {
   name : 'Nav',
-  components: { NavController },
-  props: ['isNavHidden']
+  components: { NavController, NavLink },
+  data() {
+    return {
+      topNavShow: false,
+    }
+  },  
+  props: ['isNavHidden'],
 }
 </script>
 
@@ -39,7 +47,7 @@ export default {
   z-index 100
 
 // logo
-.nav .logo-content// logo
+.nav .logo-content
   width 100%
   height 80px
   position relative
