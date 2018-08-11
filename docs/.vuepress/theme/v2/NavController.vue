@@ -2,16 +2,14 @@
   <div :class="['nav-controller', 
   isNavHidden? 'controller-hidden':'controller-open']" 
   @click="$emit('toggle-nav')">
-    <transition name="humberger">
-      <div v-show="!isNavHidden" 
+    <transition name="humberger" mode="out-in">
+      <div v-if="!isNavHidden" 
         class="humberger humberger-open">
           <span class="hum1"></span>
           <span class="hum2"></span>
           <span class="hum3"></span>
         </div>
-    </transition>
-    <transition name="humberger">
-      <div v-show="isNavHidden" 
+      <div v-if="isNavHidden" 
         class="humberger humberger-hidden">
           <span class="hum1"></span>
           <span class="hum2"></span>
@@ -38,7 +36,7 @@ export default {
   top 34px
   z-index 101
   &.controller-open
-    left 195px
+    left 200px
     transition $time-std left $ease-out-std $delay-std 
   &.controller-hidden
     transition $time-std left $ease-out-std $delay-long 
@@ -82,7 +80,7 @@ export default {
 // 动画
 .humberger-enter-active, .humberger-leave-active
   opacity 1
-  transition opacity $time-short $time-short
+  transition opacity $time-std $time-std 
 .humberger-enter, .humberger-leave-to
   opacity 0
 </style>

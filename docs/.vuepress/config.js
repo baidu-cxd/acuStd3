@@ -9,6 +9,9 @@ const markdownConfig = require('./config/markdownConfig.js')
 //页面导航配置文件
 const mainNavData = require('./config/mainNavData.js')
 
+//页面导航配置文件
+const portalNavData = require('./config/subNav/portal.js')
+
 
 module.exports = {
     title: '百度云设计规范',
@@ -17,6 +20,7 @@ module.exports = {
     themeConfig: {
       edition: 'v2',
       mainNav: mainNavData,
+      portalNav: portalNavData,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg', 
       logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
       favicon: ' ',

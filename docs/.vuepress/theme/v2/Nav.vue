@@ -13,17 +13,20 @@
         </router-link>
       </div>
       <!--主导航--> 
+      <NavMain/>
+      <!--二级导航--> 
+      <SubNav/>
     </div>
   </div>
 </template>
 
 <script>
 import NavController from './NavController.vue'
-import NavLink from './NavLink.vue'
-import { resolveNavLinkItem } from './util'
+import NavMain from './NavMain.vue'
+import SubNav from './SubNav.vue'
 export default {
   name : 'Nav',
-  components: { NavController, NavLink },
+  components: { NavController, NavMain, SubNav },
   data() {
     return {
       topNavShow: false,
