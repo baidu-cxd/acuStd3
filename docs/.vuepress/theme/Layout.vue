@@ -4,7 +4,9 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Nav v-if="shouldShowNav"/>
+    <Nav v-if="shouldShowNav"
+    @toggle-nav="toggleNav"
+    :isNavHidden = "isNavHidden"/>
     <Home v-if="$page.frontmatter.home"/>
     <div v-else class="main-wrp">
       <div class="page-wrp">
@@ -113,7 +115,7 @@ export default {
   },
 
   methods: {
-    toggleSidebar (to) {
+    toggleNav (to) {
       this.isNavHidden = typeof to === 'boolean' ? to : !this.isNavHidden
     },
     // side swipe
@@ -128,9 +130,9 @@ export default {
       const dy = e.changedTouches[0].clientY - this.touchStart.y
       if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
         if (dx > 0 && this.touchStart.x <= 80) {
-          this.toggleSidebar(true)
+          this.toggleNav(true)
         } else {
-          this.toggleSidebar(false)
+          this.toggleNav(false)
         }
       }
     }

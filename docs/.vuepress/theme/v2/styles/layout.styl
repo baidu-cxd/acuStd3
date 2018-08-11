@@ -12,12 +12,14 @@
 .page-wrp
   max-width 960px
   margin auto
-  padding 0 40px
+  padding 0 20px
 
 .nav-show
   .main-wrp, .footer
     margin-left $sidebarWidth
+    transition margin-left $time-std $ease-in-out-std 
 
 .nav-hidden
   .main-wrp, .footer
     margin-left 0
+    transition margin-left $time-std $ease-in-out-std $delay-long
