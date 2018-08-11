@@ -31,7 +31,7 @@ export default {
   components: { Home, Page, PrevNext, Nav, Footer },
   data () {
     return {
-      isSidebarHidden: false
+      isNavHidden: false
     }
   },
 
@@ -58,9 +58,7 @@ export default {
     pageClasses() {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
-        {
-          'sidebar-hidden': this.isSidebarHidden,
-        },
+        this.isNavHidden? 'nav-hidden' : 'nav-show',
         userPageClass,
         this.$page.frontmatter.home? 'home' : ' '
       ]
@@ -116,7 +114,7 @@ export default {
 
   methods: {
     toggleSidebar (to) {
-      this.isSidebarHidden = typeof to === 'boolean' ? to : !this.isSidebarHidden
+      this.isNavHidden = typeof to === 'boolean' ? to : !this.isNavHidden
     },
     // side swipe
     onTouchStart (e) {

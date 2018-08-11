@@ -5,7 +5,8 @@
 
 // 配置文件
 @import './config'
-$to-top = 40px
+@import './tool'
+$to-top = 10px
 $h1-margin = 50px
 $h2-margin = 40px
 $h3-margin = 30px
@@ -14,45 +15,93 @@ $h5-margin = 20px
 
 // 字号行高配置文件在 config.styl 中，使用 extend 引入
 
-// 样式
+// 标题正文和链接样式
 .article
-  h1, h2, h3, h4, h5, p
-    font-family -apple-system, BlinkMacSystemFont,"SF Pro SC","SF Pro Text","Helvetica Neue",  Helvetica, "PingFang SC", Roboto, 'Arial','microsoft yahei ui',"Microsoft YaHei",SimSun, sans-serif
-    -moz-osx-font-smoothing grayscale
-    -webkit-font-smoothing antialiased
+  h1, h2, h3, h4, h5
+    margin-left -0.8em
+    padding-left 0.8em
   h1, h2, h3, h4, h5
     font-weight 500
     color $text-black-heading
+    position relative
     a
       font-size 1em
+      opacity 0
+      position absolute
+      left 0
+      top 0
+      display inline-block
+      color $link-color-1
+    &:hover
+      a
+        opacity 1
   p, ul, li, ol
     font-weight 400
     color $text-black-std
     @extend .p-size-std
-  ul, li
-    margin 0
+  p
+    margin 20px 0
+  li
+    margin 5px 0
+  ul, ol
+    margin-left 20px
   a
     font-weight 400
     color $link-color
     text-decoration none
     @extend .p-size-std
+    &:hover
+      text-decoration underline
   h1
     padding-top $to-top + $h1-margin
+    padding-bottom 40px
     margin-top - $to-top 
-    margin-bottom 30px
+    margin-bottom 40px
     @extend .h1-size-std
+    display block
+    box-sizing border-box
+    position relative
+    &:after 
+      @extend .class-block
+      position absolute
+      bottom 0px
+      width 100%
+      height 1px
+      background-color $border-color
+  h1 a
+    @extend .h1-size-std
+    padding-top $h1-margin + $to-top 
   h2
     padding-top $to-top + $h2-margin
     margin-top - $to-top 
     margin-bottom 20px
     @extend .h2-size-small
+  h2 a
+    @extend .h2-size-small
+    padding-top $h2-margin + $to-top 
   h3
     padding-top $to-top + $h3-margin
     margin-top - $to-top 
     margin-bottom 10px
     @extend .h3-size-std
+  h3 a
+    @extend .h3-size-std
+    padding-top $h3-margin + $to-top 
   h4
     padding-top $to-top + $h4-margin
     margin-top - $to-top 
     margin-bottom 10px
     @extend .h4-size-std
+  h4 a
+    @extend .h4-size-std
+    padding-top $h4-margin + $to-top 
+
+// blockquote
+.article
+  blockquote 
+    margin 20px 0 0 5px
+    p
+      padding-left 20px
+      display block
+      border-left 3px solid $border-color
+      color $text-black-weak 
