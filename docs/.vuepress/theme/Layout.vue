@@ -110,9 +110,9 @@ export default {
     })
   },
 
-  beforeDestroy () {
-    updateMetaTags(null, this.currentMetaTags)
-  },
+  //beforeDestroy () {
+  //  updateMetaTags(null, this.currentMetaTags)
+  //},
 
   methods: {
     toggleNav (to) {

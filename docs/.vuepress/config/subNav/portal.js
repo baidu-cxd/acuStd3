@@ -4,22 +4,10 @@
  */
 
 portalNavData = [
-    { 
-      "text": "概述", 
-      "link": "./"
-    },
-    { 
-      "text": "Design Token",
-      "link": "DesignToken"
-    },
-    { 
-      "text": "CMS 组件状态管理",
-      "link": "CMS"
-    },
-    {
-      "text": "IconFont",
-      "link": "IconFont"
-    }
+    "./" ,         // 概述
+    "DesignToken", // designToken
+    "CMS",         // CMS 管理
+    "IconFont",    // Iconfont
 ]
 
 module.exports = portalNavData;

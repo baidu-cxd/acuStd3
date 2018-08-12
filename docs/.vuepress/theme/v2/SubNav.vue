@@ -4,8 +4,8 @@
       <!-- 动画文档的导航栏 -->
       <transition name="fade-nav">
       <ul :key="nowPage">
-        <li v-for="(item,i) in resolveItem()">
-          <NavLink :item="item" :hasIcon="false"/>
+        <li v-for="(item,i) in navData()">
+          <NavLink :item="resolveLinkItem(item)" :hasIcon="false"/>
         </li>
       </ul>
       </transition>
@@ -27,6 +27,7 @@
 
 <script>
 import NavLink from './NavLink.vue'
+import { resolveSubSidebarItem } from './util'
 export default {
   name: 'SubNav',
   components: {NavLink},
@@ -36,8 +37,13 @@ export default {
     }
   },
   methods: {
-    resolveItem () { 
+    navData () { 
       return this.$site.themeConfig[this.nowPage+"Nav"]
+    },
+    resolveLinkItem(item) {
+      const nowPage = this.nowPage
+      const navObj = this.$site.pages
+      return resolveSubSidebarItem(item, nowPage, navObj)
     }
   }
 }
@@ -45,7 +51,16 @@ export default {
 
 <style lang="stylus">
 @import './styles/config'
+.hiddenTop .sub-nav
+  transition $time-std $ease-in-out-std $delay-long
+.showTop .sub-nav
+  top 330px 
 .sub-nav
+  transition $time-std $ease-in-out-std 
+  position absolute 
+  top 130px 
+  bottom 0
+  width 100%
   .sub-nav-content
     padding 0 10px
   ul
@@ -58,7 +73,7 @@ export default {
     transition $transition-std
     &:hover
       background-color $bg-color-darken-mask 
-    a
+    a 
       display block
       width 100%
       @extend .p-size-std

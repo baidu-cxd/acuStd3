@@ -28,12 +28,32 @@ export function findPageForPath (pages, path) {
 
 // v2 对应函数
 
-export function resolveSubSidebarItems (page, route, site, localePath){
-  return []
+export function resolveSubSidebarItem (item, nowPage, navObj) {
+  // 先把简写成 string 的内容处理一下
+  if (typeof item === 'string') {
+    item = Object.assign({
+      link: item
+    })   
+  }
+  let realLink
+  if (item.link === './') {
+    realLink = "/" + nowPage + "/"
+  } else {
+    realLink = "/" + nowPage + "/" + item.link + ".html"
+  }
+  let obj = {};
+  navObj.forEach(function (v) {
+      obj[v.path] = v
+  });
+  const fulldata = obj[realLink]
+  const resolvedItem = Object.assign(item ,{
+    text: fulldata.title
+  })
+  return resolvedItem
 }
 
 
-// 原有
+// 原有 vuepress 函数
 
 export function normalize (path) {
   return path

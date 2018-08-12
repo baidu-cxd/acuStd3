@@ -1,8 +1,7 @@
 <template>
   <div class="nav-main">
     <!--页面级别导航-->  
-    <div :class="[topNavShow ? 'showTop':'hiddenTop','guide-link-content']"
-    @click="toggleList()">
+    <div  class="guide-link-content"  @click="$emit('toggle-main-list')">
       <!--当前页面--> 
       <div v-for="(item,i) in userLinks"
         v-if="item.link.split('/')[1] == nowPage"
@@ -33,9 +32,10 @@ export default {
   components: {NavLink},
   data() {
     return {
-      topNavShow: false,
+      
     }
   },  
+  prop: ['topNavShow'],
   computed: {
     navMain() {
       return this.$site.themeConfig.mainNav
@@ -52,9 +52,6 @@ export default {
     }
   },
   methods: {
-    toggleList () {
-      this.topNavShow = !this.topNavShow
-    },
     delay (i) {
       return "transition-delay:" + (50 * i + 50) + "ms;"
     }
@@ -65,7 +62,7 @@ export default {
 <style lang="stylus">
 @import './styles/config'
 
- $navNumber = 6
+$navNumber = 6
 
 //顶部的三个点
 .showTop .nav-now:hover .arr
@@ -129,14 +126,19 @@ export default {
   position relative
 
 .nav-main
+  position absolute
+  top 80px
+  left 0
+  width 100%
   overflow-y hidden
-  .nav-now, .nav-other a
+  .nav-now, .nav-other a 
     font-size 14px
     line-height 40px
     font-weight 600
     color $text-black-heading
-  .nav-other a
     text-decoration none
+    display block
+  .nav-other a
     color $text-black-heading
     opacity .6 
     transition $transition-std
@@ -146,22 +148,23 @@ export default {
     height 40px
     padding-bottom 10px
     border-bottom 1px solid $border-color
-    margin 0 20px
+    padding 0 20px 10px
     .nav-guide-link
       transition $time-std all $ease-in-out-std
     &:hover
       cursor pointer
-    &.showTop
-      height (40 * $navNumber)px
-      transition $time-short height $ease-in-out-std
-      .nav-guide-link
-        opacity 1
-        transform translateX(0)
-    &.hiddenTop
-      transition $time-short height $ease-in-out-std $delay-long 
-      .nav-guide-link
-        opacity 0
-        transform translateX(-40px)
+
+.showTop .guide-link-content
+  height (40 * $navNumber)px
+  transition $time-short height $ease-in-out-std
+  .nav-guide-link
+    opacity 1
+    transform translateX(0)
+.hiddenTop .guide-link-content
+  transition $time-short height $ease-in-out-std $delay-long 
+  .nav-guide-link
+    opacity 0
+    transform translateX(-40px)
 
 </style>
 

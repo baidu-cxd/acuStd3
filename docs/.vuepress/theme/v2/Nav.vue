@@ -3,7 +3,8 @@
     <NavController 
     @toggle-nav="$emit('toggle-nav')"
     :isNavHidden = "isNavHidden"/>
-    <div class="nav-content">
+    <div class="nav-content"
+    :class="[topNavShow ? 'showTop':'hiddenTop']">
       <!--页面logo--> 
       <div class="logo-content">
         <router-link :to="$localePath" class="home-link">
@@ -13,7 +14,7 @@
         </router-link>
       </div>
       <!--主导航--> 
-      <NavMain/>
+      <NavMain @toggle-main-list="toggleMainList()"/>
       <!--二级导航--> 
       <SubNav/>
     </div>
@@ -33,6 +34,11 @@ export default {
     }
   },  
   props: ['isNavHidden'],
+  methods: {
+    toggleMainList () {
+      this.topNavShow = !this.topNavShow
+    },
+  }
 }
 </script>
 

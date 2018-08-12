@@ -5,7 +5,7 @@
     v-if="!isExternal(link)"
     :exact="link === '/'">
     <img v-if="hasIcon === true && item.icon" :src="item.icon" alt="" class=""/>
-    <span class="text">{{ item.text }}</span>
+    <span class="text">{{ text }}</span>
   </router-link>
   <a
     v-else
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, ensureExt } from './util'
+import { isExternal, isMailto, ensureExt,} from './util'
 
 export default {
   props: {
@@ -32,6 +32,9 @@ export default {
   computed: {
     link() {
       return ensureExt(this.item.link)
+    },
+    text() {
+      return this.item.text || this.link
     }
   },
   methods: {
