@@ -4,7 +4,7 @@
 */
 
 @require './config'
-@require './layout/grid' //页面内的栅格布局
+@require './util/grid' //页面内的栅格布局
 
 .page
   padding-bottom 40px
@@ -12,7 +12,8 @@
 .page-wrp
   max-width 960px
   margin auto
-  padding 0 20px
+  padding 0 80px
+  min-height 650px
 
 .nav-show
   .main-wrp, .footer
@@ -23,3 +24,4 @@
   .main-wrp, .footer
     margin-left 0
     transition margin-left $time-std $ease-in-out-std $delay-long
+  

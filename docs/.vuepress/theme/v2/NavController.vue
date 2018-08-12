@@ -70,13 +70,13 @@ export default {
         transform translate(-2px,-1px) rotate(45deg)
     &.humberger-hidden:hover
       .hum1
-        width 12px
-        transform translate(6px,1px) rotate(45deg)
+        //width 12px
+        //transform translate(6px,1px) rotate(45deg)
       .hum2
-        transform translateX(0px) rotate(0deg)
+        //transform translateX(0px) rotate(0deg)
       .hum3
-        width 12px  
-        transform translate(6px,-1px) rotate(-45deg)
+        //width 12px  
+        //transform translate(6px,-1px) rotate(-45deg)
 // 动画
 .humberger-enter-active, .humberger-leave-active
   opacity 1

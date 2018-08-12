@@ -160,3 +160,4 @@ function updateMetaTags (meta, current) {
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="./v2/styles/theme.styl" lang="stylus"></style>
+<style src="./v2/styles/util/iconfont.css"></style>

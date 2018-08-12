@@ -6,6 +6,8 @@
 // 配置文件
 @import './config'
 @import './tool'
+@import './util/custom-blocks'
+
 $to-top = 10px
 $h1-margin = 50px
 $h2-margin = 40px
@@ -79,6 +81,10 @@ $h5-margin = 20px
   h2 a
     @extend .h2-size-small
     padding-top $h2-margin + $to-top 
+  div h2
+    padding-top $h2-margin
+  div h2 a
+    padding-top $h2-margin
   h3
     padding-top $to-top + $h3-margin
     margin-top - $to-top 
@@ -87,6 +93,10 @@ $h5-margin = 20px
   h3 a
     @extend .h3-size-std
     padding-top $h3-margin + $to-top 
+  div h3
+    padding-top $h3-margin
+  div h3 a
+    padding-top $h3-margin
   h4
     padding-top $to-top + $h4-margin
     margin-top - $to-top 
@@ -105,3 +115,50 @@ $h5-margin = 20px
       display block
       border-left 3px solid $border-color
       color $text-black-weak 
+
+// 表格
+.article
+  table
+    border-collapse collapse
+    margin 20px 0
+    width 100%
+    border-bottom 1px solid $border-color 
+  tr
+    border-top 1px solid $border-color 
+    &:nth-child(2n)
+      background-color #ffff
+  th 
+    color $text-black-heading
+    font-size 14px
+    font-weight 500
+    line-height 42px
+    text-align left 
+    background-color $thead-color 
+    color $textColorDark
+  td
+    color $text-black-std 
+    line-height 26px
+    font-size 14px
+    min-width 80px
+    padding 8px 0
+
+// 列表
+.article
+  ul, ol
+    padding-left 16px
+    margin 20px 0
+    color $text-black-std
+    li
+      line-height 26px
+      padding-left 0px
+      margin 5px 0
+      p
+        margin 0
+    ul
+      margin 5px 0
+
+// 标记
+
+mark
+  color $emphasize-color
+  background-color transparent
