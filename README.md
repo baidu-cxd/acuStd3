@@ -10,6 +10,6 @@
 
 ### Console
 
-[COnsole 导航](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/console.js)
+[Console 导航](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/console.js)
 
 [Console 规范](https://github.com/dingzu/acuStd3/tree/master/docs/console)
