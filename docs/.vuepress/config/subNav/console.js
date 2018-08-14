@@ -9,8 +9,8 @@ consoleNavData = [
       text : "设计原则",
       groupUrl : "principle",
       children : [
-        "Color",    // 色彩
         "Layout",   // 布局
+        "Color",    // 色彩
         "Font",     // 字体
         "Element",  // 元素
       ]
