@@ -29,15 +29,15 @@ export function findPageForPath (pages, path) {
 // v2 对应函数
 
 // 解算 link 内容的主函数
-export function resolveSubSidebarItem (item, nowPage, navObj) {
+export function resolveSubSidebarItem (item, nowPage, navObj, basePath) {
   // 首先判断数据是链接还是编组
   // 如果内容是一个 string 那么一定是一个链接
   let resolvedItem = {}
   if (typeof item === 'string') {
     resolvedItem = Object.assign({
-      link: item,
+      link: resolveLinkByItem(item, nowPage, basePath),
       kind: 'single',
-      text: resolveTextBylink(item, nowPage, navObj)
+      text: resolveTextByItem(item, nowPage, navObj, basePath)
     })   
   }
   // 如果内容是一个对象，那么先看对象内有没有 children
@@ -45,29 +45,35 @@ export function resolveSubSidebarItem (item, nowPage, navObj) {
     resolvedItem = Object.assign({
       link: item.link,
       kind: 'single',
-      text: resolveTextBylink(item.link, nowPage, navObj)
+      text: resolveTextByItem(item.link, nowPage, navObj, basePath)
     })   
   }
   // 如果内容是有 children 的对象，那么它是一个组
   if (typeof item === 'object' && item.children) {
     resolvedItem = Object.assign({
       kind: 'group',
-      text: item.text || '缺少组命名字'
+      text: item.text || '缺少组命名字',
+      groupUrl: item.groupUrl,
+      children: item.children
     })     
   }
-
   return resolvedItem
+}
+
+// 结算出链接
+
+export function resolveLinkByItem (link, nowPage, basePath ) {
+  if (link === '/' && !basePath) return  '/' + nowPage + '/'
+  if (link === '/' && basePath) return  '/' + nowPage + '/' + basePath + '/'  
+  if (link !== '/' && basePath) return '/' + nowPage + '/' + basePath + '/' + link + '.html'
+  return '/' + nowPage +  '/' + link + '.html'
 }
 
 // 解算 link 内容的中解算出 link 对应 text 的函数
 
-export function resolveTextBylink (link, nowPage, navObj) {
-  let realLink 
-  if (link === './') {
-    realLink = "/" + nowPage + "/"
-  } else {
-    realLink = "/" + nowPage + "/" + link + ".html"
-  } 
+export function resolveTextByItem (link, nowPage, navObj, basePath) {
+  let realLink = resolveLinkByItem (link, nowPage, basePath ) 
+  console.log (realLink)
   let obj = {};
   navObj.forEach(function (v) {
       obj[v.path] = v
@@ -77,7 +83,11 @@ export function resolveTextBylink (link, nowPage, navObj) {
   if (fulldata) {
     title = fulldata.title
   } else {
-    title = "缺少文档 ／" + link + ".md"
+    if (link === "/") {
+      title = "缺少文档 ：README.md"
+    } else {
+      title = "缺少文档 ：" + link + ".md"
+    }
   }
   return title
 }

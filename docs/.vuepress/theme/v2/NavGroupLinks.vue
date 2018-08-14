@@ -1,7 +1,7 @@
 <template>
   <div class="sub-nav-links">
     <NavLink :item="item" v-if="item.kind === 'single'"/>
-    <NavGroup :groupItem="item" v-if="item.kind === 'group'"/>
+    <NavGroup :item="item" v-if="item.kind === 'group'"/>
   </div>
 </template>
 

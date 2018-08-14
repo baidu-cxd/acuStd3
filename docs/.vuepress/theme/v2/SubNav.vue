@@ -33,7 +33,8 @@ export default {
     resolveLinkItem(item) {
       const nowPage = this.nowPage()
       const navObj = this.$site.pages
-      return resolveSubSidebarItem(item, nowPage, navObj)
+      const groupPath = false
+      return resolveSubSidebarItem(item, nowPage, navObj, groupPath)
     }
   }
 }
@@ -51,6 +52,9 @@ export default {
   top 130px 
   bottom 0
   width 100%
+  overflow-x hidden
+  overflow-y auto
+  padding-bottom 120px
   .sub-nav-content
     padding 0 10px
   ul
@@ -58,11 +62,8 @@ export default {
   li
     list-style none
     display block
-    height 36px
-    padding 0 10px
+    padding 0
     transition $transition-std
-    &:hover
-      background-color $bg-color-darken-mask 
     a,span
       display block
       width 100%

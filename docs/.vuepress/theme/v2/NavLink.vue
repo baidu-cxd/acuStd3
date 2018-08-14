@@ -32,6 +32,7 @@ export default {
   computed: {
     link() {
       return ensureExt(this.item.link)
+      //return this.item.link
     },
     text() {
       return this.item.text || this.link
