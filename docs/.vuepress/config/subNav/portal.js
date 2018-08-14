@@ -4,7 +4,7 @@
  */
 
 portalNavData = [
-    "/" ,         // 概述
+    "/" ,          // 概述
     "DesignToken", // designToken
     "CMS",         // CMS 管理
     "IconFont",    // Iconfont
