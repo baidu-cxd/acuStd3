@@ -10,7 +10,7 @@ portalNavData = [
     "IconFont",    // Iconfont
     {
       text : "风格",
-      groupUrl : "Style",
+      groupUrl : "style",
       children : [
         "Color",   // 色彩
         "Text"    // 文字

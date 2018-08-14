@@ -12,6 +12,7 @@ const mainNavData = require('./config/mainNavData.js')
 //页面导航配置文件
 const portalNavData = require('./config/subNav/portal.js')
 const marketingNavData = require('./config/subNav/marketing.js')
+const consoleNavData = require('./config/subNav/console.js')
 
 
 module.exports = {
@@ -23,6 +24,7 @@ module.exports = {
       mainNav: mainNavData,
       portalNav: portalNavData,
       marketingNav: marketingNavData,
+      consoleNav: consoleNavData,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg', 
       logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
       favicon: ' ',
