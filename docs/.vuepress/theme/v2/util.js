@@ -28,30 +28,58 @@ export function findPageForPath (pages, path) {
 
 // v2 对应函数
 
+// 解算 link 内容的主函数
 export function resolveSubSidebarItem (item, nowPage, navObj) {
-  // 先把简写成 string 的内容处理一下
+  // 首先判断数据是链接还是编组
+  // 如果内容是一个 string 那么一定是一个链接
+  let resolvedItem = {}
   if (typeof item === 'string') {
-    item = Object.assign({
+    resolvedItem = Object.assign({
       link: item,
-      kind: 'single'
+      kind: 'single',
+      text: resolveTextBylink(item, nowPage, navObj)
     })   
   }
-  let realLink
-  if (item.link === './') {
+  // 如果内容是一个对象，那么先看对象内有没有 children
+  if (typeof item === 'object' && !item.children) {
+    resolvedItem = Object.assign({
+      link: item.link,
+      kind: 'single',
+      text: resolveTextBylink(item.link, nowPage, navObj)
+    })   
+  }
+  // 如果内容是有 children 的对象，那么它是一个组
+  if (typeof item === 'object' && item.children) {
+    resolvedItem = Object.assign({
+      kind: 'group',
+      text: item.text || '缺少组命名字'
+    })     
+  }
+
+  return resolvedItem
+}
+
+// 解算 link 内容的中解算出 link 对应 text 的函数
+
+export function resolveTextBylink (link, nowPage, navObj) {
+  let realLink 
+  if (link === './') {
     realLink = "/" + nowPage + "/"
   } else {
-    realLink = "/" + nowPage + "/" + item.link + ".html"
-  }
+    realLink = "/" + nowPage + "/" + link + ".html"
+  } 
   let obj = {};
   navObj.forEach(function (v) {
       obj[v.path] = v
-  });
-  const fulldata = obj[realLink]
-  const resolvedItem = Object.assign(item ,{
-    text: fulldata.title,
-    kind: 'single'
   })
-  return resolvedItem
+  const fulldata = obj[realLink]
+  let title 
+  if (fulldata) {
+    title = fulldata.title
+  } else {
+    title = "缺少文档 ／" + link + ".md"
+  }
+  return title
 }
 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="sub-nav-links">
-    <NavLink :item="item" v-if="item.kind = 'single'"/>
-    <NavGroup :item="item" v-if="item.kind = 'group'"/>
+    <NavLink :item="item" v-if="item.kind === 'single'"/>
+    <NavGroup :item="item" v-if="item.kind === 'group'"/>
   </div>
 </template>
 
@@ -21,7 +21,5 @@ export default {
   methods: {
   }
 }
-</script>
-
 </script>
 

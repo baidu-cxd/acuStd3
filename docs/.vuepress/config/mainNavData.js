@@ -16,7 +16,7 @@ const mainNavData = [
   },
   {
     "text": "Marketing 营销",
-    "link": "/Marketing/",
+    "link": "/marketing/",
     "icon": "http://yihan.gz.bcebos.com/icon16.png"
   },
   {

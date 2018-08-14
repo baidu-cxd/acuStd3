@@ -1,7 +1,5 @@
 ---
 title: 百度云 Portal 端规范
-sidebar: false
-edition: v2
 ---
 
 # 百度云官网 Portal 设计规范

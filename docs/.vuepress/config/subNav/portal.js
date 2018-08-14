@@ -9,7 +9,7 @@ portalNavData = [
     "CMS",         // CMS 管理
     "IconFont",    // Iconfont
     {
-      class : "风格",
+      text : "风格",
       children : [
         "Color",   // 色彩
         "Text"    // 文字
