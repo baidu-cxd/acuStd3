@@ -20,7 +20,7 @@ consoleNavData = [
       groupUrl : "principle",
       children : [
         "Wayfinding",    // 界面方向感
-        "Simplicity",    // 简约至上
+        "Simplicity",    // 简约至上的设计
         "Font",          // 字体
         "Element",       // 元素
       ]
