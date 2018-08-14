@@ -5,7 +5,8 @@
       <transition name="fade-nav">
       <ul :key="nowPage">
         <li v-for="(item,i) in navData()">
-          <NavLink :item="resolveLinkItem(item)" :hasIcon="false"/>
+          <SubNavLinks 
+          :item="resolveLinkItem(item)"/>
         </li>
       </ul>
       </transition>
@@ -26,11 +27,11 @@
 </style>
 
 <script>
-import NavLink from './NavLink.vue'
+import SubNavLinks from './SubNavLinks.vue'
 import { resolveSubSidebarItem } from './util'
 export default {
   name: 'SubNav',
-  components: {NavLink},
+  components: {SubNavLinks},
   computed: {
     nowPage : function () {
       return this.$page.path.split('/')[1]

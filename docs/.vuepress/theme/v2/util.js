@@ -32,7 +32,8 @@ export function resolveSubSidebarItem (item, nowPage, navObj) {
   // 先把简写成 string 的内容处理一下
   if (typeof item === 'string') {
     item = Object.assign({
-      link: item
+      link: item,
+      kind: 'single'
     })   
   }
   let realLink
@@ -47,7 +48,8 @@ export function resolveSubSidebarItem (item, nowPage, navObj) {
   });
   const fulldata = obj[realLink]
   const resolvedItem = Object.assign(item ,{
-    text: fulldata.title
+    text: fulldata.title,
+    kind: 'single'
   })
   return resolvedItem
 }
