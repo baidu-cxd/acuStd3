@@ -8,7 +8,7 @@ marketingNavData = [
     "Page",        // 页面
     {
       text : "风格",
-      groupUrl : "Styles",
+      groupUrl : "styles",
       children : [
         "Color",    // 色彩
         "Layout",   // 布局
@@ -18,7 +18,7 @@ marketingNavData = [
     },
     {
       text : "组件",
-      groupUrl : "Component",
+      groupUrl : "component",
       children : [
         "/",         // 组件汇总 README.md
         "Navgation",  // 导航
@@ -29,7 +29,7 @@ marketingNavData = [
     },
     {
       text : "动画",
-      groupUrl : "Animate",
+      groupUrl : "animate",
       children : [
         "/",         // 动画汇总 README.md
         "Base",       // 基础动画

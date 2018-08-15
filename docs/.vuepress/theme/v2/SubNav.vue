@@ -73,6 +73,7 @@ export default {
       line-height 36px
       &.router-link-exact-active
         font-weight 600
+        color $text-black-heading
 
 .fade-nav-enter-active
   transition: all $time-std $ease-in-out-std $time-std

@@ -36,7 +36,7 @@ export default {
   top 34px
   z-index 101
   &.controller-open
-    left 200px
+    left ($sidebarWidth - 40px)
     transition $time-std left $ease-out-std $delay-std 
   &.controller-hidden
     transition $time-std left $ease-out-std $delay-long 

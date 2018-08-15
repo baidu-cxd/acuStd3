@@ -73,7 +73,6 @@ export function resolveLinkByItem (link, nowPage, basePath ) {
 
 export function resolveTextByItem (link, nowPage, navObj, basePath) {
   let realLink = resolveLinkByItem (link, nowPage, basePath ) 
-  console.log (realLink)
   let obj = {};
   navObj.forEach(function (v) {
       obj[v.path] = v

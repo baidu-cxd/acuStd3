@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style lang="stylus">
+@import 'styles/config'
 @import 'styles/layout'
 // 基本样式
 .nav .nav-content
