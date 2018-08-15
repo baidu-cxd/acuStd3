@@ -14,7 +14,8 @@
         </router-link>
       </div>
       <!--主导航--> 
-      <NavMain @toggle-main-list="toggleMainList()"/>
+      <NavMain  @toggle-main-list="toggleMainList()"
+      :topNavShow = "topNavShow"/>
       <!--二级导航--> 
       <SubNav/>
     </div>

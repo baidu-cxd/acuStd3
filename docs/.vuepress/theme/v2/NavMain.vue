@@ -18,7 +18,7 @@
         v-for="(item,i) in userLinks"
         :class="['nav-guide-link','nav-other']"
         :key="item.link"
-        :style="delay(i)">
+        :style="delay(i,userLinks.length)">
         <NavLink :item="item"/>
       </div>
     </div>
@@ -35,7 +35,11 @@ export default {
       
     }
   },  
-  prop: ['topNavShow'],
+  props: {
+    topNavShow: {
+      required: true
+    }
+  },
   computed: {
     navMain() {
       return this.$site.themeConfig.mainNav
@@ -52,8 +56,9 @@ export default {
     }
   },
   methods: {
-    delay (i) {
-      return "transition-delay:" + (50 * i + 50) + "ms;"
+    delay (i,j) {
+      if(this.topNavShow) return "transition-delay:" + (50 * i + 50) + "ms;"
+      return "transition-delay:" + (50 * (j-i)) + "ms;"
     }
   }
 }
@@ -150,7 +155,7 @@ $navNumber = 6
     border-bottom 1px solid $border-color
     padding 0 20px 10px
     .nav-guide-link
-      transition $time-std all $ease-in-out-std
+      transition $time-short all $ease-in-out-std
     &:hover
       cursor pointer
 
@@ -164,7 +169,7 @@ $navNumber = 6
   transition $time-short height $ease-in-out-std $delay-long 
   .nav-guide-link
     opacity 0
-    transform translateX(-40px)
+    transform translateX(-5px)
 
 </style>
 

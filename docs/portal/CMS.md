@@ -1,5 +1,4 @@
 ---
-title: CMS 板块管理文件
 author: DZ（wangyihan05@baidu.com）
 sidebarDepth: 0
 edition: v2

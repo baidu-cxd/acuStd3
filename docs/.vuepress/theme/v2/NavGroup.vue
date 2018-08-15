@@ -1,17 +1,18 @@
 <template>
   <div class="nav-group" :class="resolveClass()">
+    <span class="title-text"
+    @click="toogleGroup()">
     <div class="group-more">
       <span class="more-1"></span>
       <span class="more-2"></span>
     </div>
-    <span class="title-text"
-    @click="toogleGroup()">
     {{groupItem.text}}</span>
-    <ul class="item-group" :style="resolveHeight(groupItem.children.length)">
+    <ul class="item-group" 
+      :style="resolveHeight(groupItem.children.length)">
       <li v-for="(item,i) in groupItem.children"
-      :style="delay(i)">
+        :style="delay(i,groupItem.children.length)">
         <NavGroupLinks
-        :item="resolveLinkItem(item)"/>
+          :item="resolveLinkItem(item)"/>
       </li>
     </ul>
   </div>
@@ -35,6 +36,15 @@ export default {
   },
   computed: { 
   },
+  // 自动展开编组
+  mounted: function (){
+    if ( this.$page.path.split('/').length >= 4){
+      const nowGroup = this.$page.path.split('/')[2]
+      if (nowGroup === this.groupItem.groupUrl){
+        this.isGroupOpen = true
+      }
+    } 
+  },
   methods: {
     resolveHeight(n) {
       if (this.isGroupOpen)  return "height :" + (n * 28 + 10) + "px" 
@@ -55,8 +65,9 @@ export default {
       const groupPath = this.groupItem.groupUrl
       return resolveSubSidebarItem(item, nowPage, navObj, groupPath)
     },
-    delay (i) {
-      return "transition-delay:" + (50 * i + 50) + "ms;"
+    delay (i,j) {
+      if(this.isGroupOpen) return "transition-delay:" + (50 * i + 50) + "ms;"
+      return "transition-delay:" + (50 * (j-i)) + "ms;"
     }
   }
 }
@@ -80,7 +91,7 @@ export default {
   .more-1, .more-2
     display block
     width 1px
-    height 8px
+    height 7px
     background-color $text-black-heading
     position absolute
     top 4px
@@ -96,15 +107,15 @@ export default {
       transition $time-std height $ease-in-out-std $delay-long
       li
         opacity 0
-        transform translateX(-4px)
-        transition $time-std all $ease-in-out-std    
+        transform translateX(4px)
+        transition $time-short all $ease-in-out-std    
   &.group-open
     ul.item-group
       transition $time-std height $ease-in-out-std 
       li
         opacity 1
         transform translateX(0)
-        transition $time-std all $ease-in-out-std 
+        transition $time-short all $ease-in-out-std 
 // 基本样式
 .nav-group
   position relative
