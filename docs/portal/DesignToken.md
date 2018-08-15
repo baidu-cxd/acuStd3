@@ -34,18 +34,18 @@ Design Token (设计变量) 是设计系统中的原子级单元, 它们是命�
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| @brand-color-main |  <i class="color brand-color-main"></i> #108cee  | 品牌标准色 |
-| @brand-color-main-hover | <i class="color brand-color-main-hover"></i> #209bfd | 品牌标准色对应 :hover |
-| @brand-color-main-active | <i class="color brand-color-main-active"></i> #047bd8   | 品牌标准色对应 :active |
-| @emphasize-color | <i class="color emphasize-color"></i> #d0021b  | 需要突出强调的时候使用的颜色 |
-| @tips-color | <i class="color tips-color"></i> #f5a623   | 标准黄色，用于提示，比红色级别稍弱 |
-| @bg-color-dark | <i class="color bg-color-dark"></i> #0f1012  | 背景用最黑色，用于头图背景等情况 |
-| @bg-color-black | <i class="color bg-color-black"></i> #303030  | 解决方案页面内容板块深色背景 |
-| @bg-color-black-1 | <i class="color bg-color-black-1"></i> #434547  | 解决方案页面深色卡片背景 |
-| @bg-color-black-2 | <i class="color bg-color-black-2"></i> #565759  | 解决方案页面深色卡片内元素背景 |
-| @bg-color-light | <i class="color bg-color-light"></i> #f5f5f5  | 背景用标准亮灰色，用于页面内的板块划分 |
-| @border-color | <i class="color border-color"></i>#ebebeb   | 边框颜色 |
-| @thead-color | <i class="color thead-color"></i>#fbfbfb   | 表头用色 |
+| @brand-color-main |   <c :color="'#108cee'"/>   | 品牌标准色 |
+| @brand-color-main-hover | <c :color="'#209bfd'"/> | 品牌标准色对应 :hover |
+| @brand-color-main-active | <c :color="'#047bd8'"/>    | 品牌标准色对应 :active |
+| @emphasize-color | <c :color="'#d0021b'"/>   | 需要突出强调的时候使用的颜色 |
+| @tips-color |  <c :color="'#f5a623'"/>    | 标准黄色，用于提示，比红色级别稍弱 |
+| @bg-color-dark | <c :color="'#0f1012'"/>   | 背景用最黑色，用于头图背景等情况 |
+| @bg-color-black | <c :color="'#303030'"/>    | 解决方案页面内容板块深色背景 |
+| @bg-color-black-1 | <c :color="'#434547'"/>   | 解决方案页面深色卡片背景 |
+| @bg-color-black-2 | <c :color="'#565759'"/>   | 解决方案页面深色卡片内元素背景 |
+| @bg-color-light | <c :color="'#f5f5f5'"/>   | 背景用标准亮灰色，用于页面内的板块划分 |
+| @border-color | <c :color="'#ebebeb'"/>    | 边框颜色 |
+| @thead-color | <c :color="'#fbfbfb'"/>   | 表头用色 |
 
 
 
@@ -53,12 +53,12 @@ Design Token (设计变量) 是设计系统中的原子级单元, 它们是命�
 
 | Token | 值 | 描述 | 
 | ---   |--- |--- |  
-| @text-black-heading|  <i class="color text-black-heading">A</i> rgba(0, 0, 0, .85)   | 标题文字用色 |
-| @text-black-std | <i class="color text-black-std">A</i> rgba(0, 0, 0, .6)  | 一般文字用色 |
-| @text-black-weak | <i class="color text-black-weak">A</i> rgba(0, 0, 0, .4)  | 浅色文字用色，一般用于标签和注释情况 |
-| @text-white-heading| <i class="color text-white-heading">A</i> rgba(255, 255, 255, 1)| 标题文字用色-深色背景 |
-| @text-white-std | <i class="color text-white-std">A</i> rgba(255, 255, 255, .75)  | 一般文字用色-深色背景  |
-| @text-white-weak | <i class="color text-white-weak">A</i> rgba(255, 255, 255, .5)  | 浅色文字用色-深色背景  |
+| @text-black-heading|  <c :color="'rgba(0, 0, 0, .85)'" :type="'text'"/>    | 标题文字用色 |
+| @text-black-std | <c :color="'rgba(0, 0, 0, .6)'" :type="'text'"/> | 一般文字用色 |
+| @text-black-weak | <c :color="'rgba(0, 0, 0, .4)'" :type="'text'"/>   | 浅色文字用色，一般用于标签和注释情况 |
+| @text-white-heading| <c :color="'rgba(255, 255, 255, 1)'" :type="'text-w'"/>  | 标题文字用色-深色背景 |
+| @text-white-std | <c :color="'rgba(255, 255, 255, .75)'" :type="'text-w'"/>    | 一般文字用色-深色背景  |
+| @text-white-weak | <c :color="' rgba(255, 255, 255, .5)'" :type="'text-w'"/>    | 浅色文字用色-深色背景  |
 
 
 

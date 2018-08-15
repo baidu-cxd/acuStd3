@@ -19,6 +19,7 @@
     "test": "vuepress dev docs",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "testpush": "bash deploytest.sh"
+    "testpush": "bash deploytest.sh",
+    "gitpush": "bash deploy.sh"
   }
 }
