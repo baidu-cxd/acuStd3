@@ -26,7 +26,9 @@ export default {
 <style lang="stylus">
 @import 'styles/config'
 .sub-nav-links 
+  overflow-x hidden
   a
+    width auto
     padding 0 10px
     &:hover
       background-color $bg-color-darken-mask 
