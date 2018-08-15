@@ -21,7 +21,7 @@ marketingNavData = [
       groupUrl : "component",
       children : [
         "/",         // 组件汇总 README.md
-        "Navgation",  // 导航
+        "Navigation",  // 导航
         "Button",     // 按钮
         "Hyperlink",  // 超链接
         "Modal",      // 模态弹窗

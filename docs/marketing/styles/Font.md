@@ -1,7 +1,7 @@
 ---
-title: 颜色
+title: 文字
 author: niulu
 ---
 
-# 颜色
+# 文字
 测试一下修改
