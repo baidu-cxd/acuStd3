@@ -1,5 +1,5 @@
 ---
-title: 资本元素
+title: 基本元素
 author: niulu
 ---
 
