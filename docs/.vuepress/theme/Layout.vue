@@ -62,7 +62,7 @@ export default {
       return [
         this.isNavHidden? 'nav-hidden' : 'nav-show',
         userPageClass,
-        this.$page.frontmatter.home? 'home' : ' '
+        this.$page.frontmatter.home? 'is-home' : ' '
       ]
     }
   },
