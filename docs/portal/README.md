@@ -1,9 +1,9 @@
 ---
 title: 百度云 Portal 端规范
+author: 韩玢
 ---
 
 # 百度云官网 Portal 设计规范
-{{this.$page.path}}
 
 百度云 Portal 端平台规范是针对百度云官网页面编写
 
@@ -49,8 +49,8 @@ title: 百度云 Portal 端规范
 #### 我是工程师:
 
 - 了解垂直开发规范
-- 查阅 [Design Token](./DesignToken.html) 
-- 了解各个 [组件版本状态](./CMS.html)
+- 查阅 [Design Token](./others/DesignToken.html)
+- 了解各个 [组件版本状态](./others/CMS.html)
 
 ::: end :::
 

@@ -18,7 +18,7 @@ const consoleNavData = require('./config/subNav/console.js')
 module.exports = {
     title: '百度云设计规范',
     description: '百度云设计规范',
-    base:'/',
+    base:'/acuStd3/',
     themeConfig: {
       edition: 'v2',
       mainNav: mainNavData,

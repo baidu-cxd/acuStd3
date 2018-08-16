@@ -5,9 +5,29 @@
 
 portalNavData = [
     "/" ,          // 概述
-    "DesignToken", // designToken
-    "CMS",         // CMS 管理
-    "IconFont",    // Iconfont
+    {
+      text : "原则",
+      groupUrl : "principle",
+      children : [
+        "/",          // 概述
+        "Unified",   // 统一性
+        "Artistic",   // 美观性
+        "Intuitive",   // 直观性
+      ]
+    }, 
+    {
+      text : "风格",
+      groupUrl : "styles",
+      children: [
+        "GridLayout", 
+        "Img",    
+        "Font",     
+        "Color",    
+        "Space",     
+        "Icon",      
+        "Shadow"
+      ]
+    },   
     {
       text : "风格",
       groupUrl : "style",
@@ -15,6 +35,15 @@ portalNavData = [
         "Color",   // 色彩
         "Text"    // 文字
       ]
+    },
+    {
+      text : "其它",
+      groupUrl : "others",
+      children : [
+        "DesignToken", // designToken
+        "CMS",         // CMS 管理
+        "IconFont",    // Iconfont
+      ] 
     }
 ]
 
