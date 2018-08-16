@@ -20,12 +20,10 @@
 
 ### Console
 
->[Console 导航配置](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/console.js)
-
->[Console 规范文档](https://github.com/dingzu/acuStd3/tree/master/docs/console)
+>- [Console 导航配置](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/console.js)
+>- [Console 规范文档](https://github.com/dingzu/acuStd3/tree/master/docs/console)
 
 ### 营销页
 
->[营销页导航配置](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/marketing.js)
-
->[营销页规范文档](https://github.com/dingzu/acuStd3/tree/master/docs/marketing)
+>- [营销页导航配置](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/marketing.js)
+>- [营销页规范文档](https://github.com/dingzu/acuStd3/tree/master/docs/marketing)
