@@ -1,15 +1,20 @@
-<!-- 暂时停用 -->
 <template>
-    <div class="colorBox" 
+    <div class="colorBox colorBox-in" 
     v-if="color2 == null"
+    :data-clipboard-text="color"
     :style="{backgroundColor: color}">
-        <p class="color-name">{{color}}</p>
-        <p class="color-text">{{text}}</p>
+        <p class="color-name" :class="this.type === 'dark'? 'dark':'white'">
+          {{color}}
+        </p>
+        <p class="color-text" :class="this.type === 'dark'? 'dark':'white'">
+          {{text}}
+        </p>
     </div>
     <div :class="['colorBox','gra',type]" 
     v-else-if="color2 !== null"
     :style="gradients">
-        <p class="color-box-color">{{color}} → {{color2}}</p><p class="color-box-text">{{text}}</p>
+        <p class="color-box-color color-name">{{color}} → {{color2}}</p>
+        <p class="color-box-text color-text">{{text}}</p>
         <div class="color-1 colorBox-in" 
         :data-clipboard-text="color"
         :style="{backgroundColor: color}"><p @click="showAlert()">{{color}}</p>
@@ -62,16 +67,24 @@ export default {
 <style lang="stylus">
 @import '../theme/v2/Styles/config.styl' 
   .colorBox
+    &:hover
+      cursor pointer
     height 20px;
     margin 0px 0;
     overflow hidden;
     padding 15px;
+    p
+      margin 0
+    p.dark
+      color #fff
     p.color-name
       margin 0
       float left
+      line-height 20px
     p.color-text
       margin 0
       float right 
+      line-height 20px
   .colorBox.gra
     transition .8s all $ease-in-out-std
     position relative

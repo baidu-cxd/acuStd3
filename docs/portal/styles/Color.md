@@ -16,19 +16,14 @@ sidebarDepth: 0
 
 主色即品牌色，传达整体页面的风格调性。层级最高色值，使用场景主要体现在页面图标、按钮等控件、重要信息高亮等明确着重表达的位置
 
-::: color #108cee
-标准色
-:::
+
+<color-copyer color="#108cee" text="标准色" />
 
 **主色拓展色：**
 
-::: color #209bfd
-滑过状态
-:::
 
-::: color #047bd8
-点击状态
-:::
+<color-copyer color="#209bfd" text="滑过状态" />
+<color-copyer color="#047bd8" text="点击状态" />
 
 **渐变拓展色：**
 
