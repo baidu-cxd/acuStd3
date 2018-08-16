@@ -10,7 +10,7 @@
 
 ⛔注意： 仅作预览用
 >不要用于真实的传播，真实传播依然使用:
->[yunshe.design](https://yunshe.design)
+>[yunshe.design](http://yunshe.design)
 
 ## 规范目录导航:
 
