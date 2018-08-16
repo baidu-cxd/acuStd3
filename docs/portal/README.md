@@ -3,6 +3,7 @@ title: 百度云 Portal 端规范
 ---
 
 # 百度云官网 Portal 设计规范
+{{this.$page.path}}
 
 百度云 Portal 端平台规范是针对百度云官网页面编写
 

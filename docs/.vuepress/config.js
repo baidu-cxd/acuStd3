@@ -27,6 +27,7 @@ module.exports = {
       consoleNav: consoleNavData,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg', 
       logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
+      gitHub: 'https://github.com/dingzu/acuStd3/blob/master/docs',
       favicon: ' ',
     },
     markdown: markdownConfig,
