@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../theme/v2/Styles/config.styl' 
+@import '../theme/v2/styles/config.styl' 
   .colorBox
     &:hover
       cursor pointer
