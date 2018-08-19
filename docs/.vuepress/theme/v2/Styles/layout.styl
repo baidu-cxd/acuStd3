@@ -1,0 +1,31 @@
+/*
+/* name: layout.styl
+/* author: DZ(wangyihan05@baidu.com)
+*/
+
+@require './config'
+@require './util/grid' //页面内的栅格布局
+
+.page
+  padding-bottom 40px
+
+.page-wrp
+  max-width 960px
+  margin auto
+  padding 0 80px
+  min-height 650px
+
+.nav-show
+  .main-wrp, .footer
+    margin-left $sidebarWidth
+    transition margin-left $time-std $ease-in-out-std 
+
+.is-home
+  .footer
+    margin-left 0
+
+.nav-hidden
+  .main-wrp, .footer
+    margin-left 0
+    transition margin-left $time-std $ease-in-out-std $delay-long
+  
