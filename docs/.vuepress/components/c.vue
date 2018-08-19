@@ -1,3 +1,4 @@
+<!-- 小型颜色选择器组件 -->
 <template>
   <span class="page-c">
     <transition name="tip">

@@ -37,13 +37,13 @@ export default {
   computed: { 
   },
   // 自动展开编组
+  watch:{
+    $route(to,from){
+      this.openGroup()
+    }
+  },
   mounted: function (){
-    if ( this.$page.path.split('/').length >= 4){
-      const nowGroup = this.$page.path.split('/')[2]
-      if (nowGroup === this.groupItem.groupUrl){
-        this.isGroupOpen = true
-      }
-    } 
+    this.openGroup()
   },
   methods: {
     resolveHeight(n) {
@@ -68,9 +68,18 @@ export default {
     delay (i,j) {
       if(this.isGroupOpen) return "transition-delay:" + (50 * i + 50) + "ms;"
       return "transition-delay:" + (50 * (j-i)) + "ms;"
+    },
+    openGroup() {
+      if ( this.$page.path.split('/').length >= 4){
+        const nowGroup = this.$page.path.split('/')[2]
+        if (nowGroup === this.groupItem.groupUrl){
+          this.isGroupOpen = true
+        }
+      } 
     }
   }
 }
+
 </script>
 
 <style lang="stylus">
