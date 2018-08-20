@@ -5,7 +5,6 @@ author: 韩玢
 
 # 百度云官网 Portal 设计规范
 
-<cms :id="'card-3'"/>
 
 百度云 Portal 端平台规范是针对百度云官网页面编写
 

@@ -9,6 +9,14 @@
       <div class="modal-section" 
         v-show = "this.isSectionModalOpen">
         <transition name="modal-in">
+          <div class="close" 
+            v-if = "this.isSectionModalOpen"
+            @click="toggleModal()">
+            <span class="close-item close-1"></span>
+            <span class="close-item close-2"></span>
+          </div>
+        </transition>
+        <transition name="modal-in">
           <div class="front-bg" v-if = "this.isSectionModalOpen">
             <h1>{{cms.name || this.$site.pages}}</h1>
             <div class="img-content">
@@ -111,13 +119,13 @@ table
       z-index 1000
     .front-bg //前景
       position absolute
-      left 20px
-      right 20px
-      top 20px
-      bottom 20px
+      left 30px
+      right 30px
+      top 30px
+      bottom 30px
       background-color #fff
       z-index 1001  
-      overflow-x hidden
+      overflow hidden
       overflow-y auto
 
 .front-bg 
@@ -127,8 +135,43 @@ table
     width 1920px
     overflow hidden
     @extend .w-middle
+    overflow-x hidden
+    overflow-y auto
   img
     width 100%
+
+.page-cms
+  .close
+    width 40px
+    height 40px
+    border-radius 100px
+    border 1px solid $border-color
+    position fixed
+    z-index 1005
+    top 80px
+    right 80px
+    background-color #fff
+    transition $time-std all $ease-in-out-std
+    &:hover
+      cursor pointer
+      border 1px solid $link-color
+      .close-item
+        background-color $link-color
+    .close-item
+      transition $time-std all $ease-in-out-std
+      width 16px
+      height 1px
+      background-color $text-black-weak
+      display block
+      position absolute
+      left 50%
+      top 50%
+    .close-1
+      transform translate(-50%,-50%) rotate(45deg)
+    .close-2
+      transform translate(-50%,-50%) rotate(-45deg)
+
+
 
 .modal-enter-active 
   transition opacity $time-short $ease-in-out-std
