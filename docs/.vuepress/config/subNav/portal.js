@@ -29,11 +29,11 @@ portalNavData = [
       ]
     },   
     {
-      text : "风格",
-      groupUrl : "style",
+      text : "页面",
+      groupUrl : "pages",
       children : [
-        "Color",   // 色彩
-        "Text"    // 文字
+        "Product",     // 产品页
+        "Solution"     // 解决方案页
       ]
     },
     {

@@ -7,8 +7,10 @@
     <Nav v-if="shouldShowNav"
     @toggle-nav="toggleNav"
     :isNavHidden = "isNavHidden"/>
+    <component :is="$page.frontmatter.layout"/>
     <Home v-if="$page.frontmatter.home"/>
-    <div v-else class="main-wrp">
+    <div class="main-wrp"
+      v-if="!$page.frontmatter.layout">
       <div class="page-wrp">
         <Page/>
         <PrevNext/>
@@ -23,6 +25,7 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import Home from './v2/Home.vue'
+import Section from './v2/Section.vue'
 import Nav from './v2/Nav.vue'
 import Page from './v2/Page.vue'
 import PrevNext from './v2/PrevNext.vue'
@@ -30,7 +33,7 @@ import Footer from './v2/Footer.vue'
 import { pathToComponentName, resolveSubSidebarItems } from './v2/util'  
 
 export default {
-  components: { Home, Page, PrevNext, Nav, Footer },
+  components: { Home, Page, PrevNext, Nav, Footer, Section },
   data () {
     return {
       isNavHidden: false
@@ -46,7 +49,7 @@ export default {
       return 'v1'
     },
     shouldShowNav () {
-      if (this.$page.frontmatter.home) return false
+      if (this.$page.frontmatter.home || this.$page.frontmatter.nav === false ) return false
       return true
     },
     subSidebarItems () {
@@ -58,11 +61,13 @@ export default {
       )
     },
     pageClasses() {
-      const userPageClass = this.$page.frontmatter.pageClass
+      const userPageClass = this.$page.frontmatter.pageClass 
+                            || this.$page.frontmatter.layout
       return [
         this.isNavHidden? 'nav-hidden' : 'nav-show',
         userPageClass,
-        this.$page.frontmatter.home? 'is-home' : ' '
+        this.$page.frontmatter.home ||
+        this.$page.frontmatter.nav === false ? 'no-nav' : ' '
       ]
     }
   },

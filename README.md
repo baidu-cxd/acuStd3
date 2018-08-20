@@ -14,6 +14,7 @@
 
 >- [Portal 导航配置](https://github.com/dingzu/acuStd3/blob/master/docs/.vuepress/config/subNav/portal.js)
 >- [Portal 规范](https://github.com/dingzu/acuStd3/tree/master/docs/portal)
+>- [Portal CMS 板块汇总](https://github.com/dingzu/acuStd3/tree/master/docs/portal/CMS/Section.md)
 
 ### Console 页面
 
