@@ -52,8 +52,8 @@ author: 韩玢
 #### 我是工程师:
 
 - 了解垂直开发规范
-- 查阅 [Design Token](./others/DesignToken.html)
-- 了解各个 [组件版本状态](./others/CMS.html)
+- 查阅 [Design Token](./others/designtoken.html)
+- 了解各个 [组件版本状态](./others/cms.html)
 
 ::: end :::
 
@@ -63,7 +63,7 @@ author: 韩玢
 
 #### 产品页和解决方案板块库:
 
-[前往页面](./CMS/Section.html)
+[前往页面](./cms/section.html)
 
 ## 其他问题?
 
