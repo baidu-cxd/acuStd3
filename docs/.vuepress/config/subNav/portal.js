@@ -10,39 +10,39 @@ portalNavData = [
       groupUrl : "principle",
       children : [
         "/",          // 概述
-        "Unified",   // 统一性
-        "Artistic",   // 美观性
-        "Intuitive",   // 直观性
+        "unified",   // 统一性
+        "artistic",   // 美观性
+        "intuitive",   // 直观性
       ]
     }, 
     {
       text : "风格",
       groupUrl : "styles",
       children: [
-        "GridLayout", 
-        "Img",    
-        "Font",     
-        "Color",    
-        "Space",     
-        "Icon",      
-        "Shadow"
+        "gridLayout", 
+        "img",    
+        "font",     
+        "color",    
+        "space",     
+        "icon",      
+        "shadow"
       ]
     },   
     {
       text : "页面",
       groupUrl : "pages",
       children : [
-        "Product",     // 产品页
-        "Solution"     // 解决方案页
+        "product",     // 产品页
+        "solution"     // 解决方案页
       ]
     },
     {
       text : "其它",
       groupUrl : "others",
       children : [
-        "DesignToken", // designToken
-        "CMS",         // CMS 管理
-        "IconFont",    // Iconfont
+        "designToken", // designToken
+        "cms",         // CMS 管理
+        "iconfont",    // Iconfont
       ] 
     }
 ]

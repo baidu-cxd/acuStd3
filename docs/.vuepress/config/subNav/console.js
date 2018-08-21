@@ -9,20 +9,20 @@ consoleNavData = [
       text : "设计原则",
       groupUrl : "principle",
       children : [
-        "Wayfinding",    // 界面方向感
-        "Simplicity",    // 简约至上
-        "Font",          // 字体
-        "Element",       // 元素
+        "wayfinding",    // 界面方向感
+        "simplicity",    // 简约至上
+        "font",          // 字体
+        "element",       // 元素
       ]
     },
     {
       text : "设计原则",
       groupUrl : "principle",
       children : [
-        "Wayfinding",    // 界面方向感
-        "Simplicity",    // 简约至上的设计
-        "Font",          // 字体
-        "Element",       // 元素
+        "wayfinding",    // 界面方向感
+        "simplicity",    // 简约至上的设计
+        "font",          // 字体
+        "element",       // 元素
       ]
     },
 ]

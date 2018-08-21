@@ -10,10 +10,10 @@ marketingNavData = [
       text : "风格",
       groupUrl : "styles",
       children : [
-        "Color",    // 色彩
-        "Layout",   // 布局
-        "Font",     // 字体
-        "Element",  // 元素
+        "color",    // 色彩
+        "layout",   // 布局
+        "font",     // 字体
+        "element",  // 元素
       ]
     },
     {
@@ -21,10 +21,10 @@ marketingNavData = [
       groupUrl : "component",
       children : [
         "/",         // 组件汇总 README.md
-        "Navigation",  // 导航
-        "Button",     // 按钮
-        "Hyperlink",  // 超链接
-        "Modal",      // 模态弹窗
+        "navigation",  // 导航
+        "button",     // 按钮
+        "hyperlink",  // 超链接
+        "modal",      // 模态弹窗
       ]
     },
     {
@@ -32,12 +32,12 @@ marketingNavData = [
       groupUrl : "animate",
       children : [
         "/",         // 动画汇总 README.md
-        "Base",       // 基础动画
-        "Special",    // 营销页特殊动画
+        "base",       // 基础动画
+        "special",    // 营销页特殊动画
       ]
     },
-    "Mobile",         // 移动端适配
-    "Resource",       // 资源
+    "mobile",         // 移动端适配
+    "resource",       // 资源
 ]
 
 module.exports = marketingNavData;
