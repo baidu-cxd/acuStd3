@@ -18,7 +18,7 @@
         </transition>
         <transition name="modal-in">
           <div class="front-bg" v-if = "this.isSectionModalOpen">
-            <h1>{{cms.name || this.$site.pages}}</h1>
+            <h4>{{cms.name || this.$site.pages}}</h4>
             <div class="img-content">
               <img :src="cms.img" alt="">
             </div>
@@ -90,11 +90,12 @@ table
 .page-cms
   display inline-block
   margin-right 10px
-  h1
-    @extend .h1-size-small
-    margin-top 40px
+  h4
+    @extend .h4-size-std
+    margin-top 30px
     padding-top 0
-    padding-bottom 40px
+    padding-left 40px
+    padding-bottom 30px
     border-bottom 1px solid $border-color
     &:after
       display none
@@ -129,8 +130,6 @@ table
       overflow-y auto
 
 .front-bg 
-  h1
-    text-align center
   .img-content
     width 1920px
     overflow hidden
@@ -148,7 +147,7 @@ table
     border 1px solid $border-color
     position fixed
     z-index 1005
-    top 80px
+    top 55px
     right 80px
     background-color #fff
     transition $time-std all $ease-in-out-std
