@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     cms() {
-      const cmsPath = '/portal/CMS/Section.html'
+      const cmsPath = '/portal/cms/section.html'
       const pageObj = this.$site.pages
       const resolvedPageObj = resolvePageObj(pageObj)
       const cmses = resolvedPageObj[cmsPath].frontmatter.cmsSection
