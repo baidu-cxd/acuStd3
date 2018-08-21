@@ -40,7 +40,7 @@ portalNavData = [
       text : "其它",
       groupUrl : "others",
       children : [
-        "designToken", // designToken
+        "designtoken", // designToken
         "cms",         // CMS 管理
         "iconfont",    // Iconfont
       ] 

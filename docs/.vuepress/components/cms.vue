@@ -8,7 +8,7 @@
     <transition name="modal">
       <div class="modal-section" 
         v-show = "this.isSectionModalOpen">
-        <transition name="modal-in">
+        <transition name="modal-left-in">
           <div class="close" 
             v-if = "this.isSectionModalOpen"
             @click="toggleModal()">
@@ -92,10 +92,11 @@ table
   margin-right 10px
   h4
     @extend .h4-size-std
-    margin-top 30px
+    color $text-black-weak
+    margin-top 10px
     padding-top 0
     padding-left 40px
-    padding-bottom 30px
+    padding-bottom 10px
     border-bottom 1px solid $border-color
     &:after
       display none
@@ -147,7 +148,7 @@ table
     border 1px solid $border-color
     position fixed
     z-index 1005
-    top 55px
+    top 60px
     right 80px
     background-color #fff
     transition $time-std all $ease-in-out-std
@@ -189,6 +190,15 @@ table
   transform translateY(20px)
 .modal-in-leave-to 
   transform translateY(20px)
+
+.modal-left-in-enter-active 
+  transition all $time-short $ease-in-out-std $delay-std
+.modal-left-in-leave-active 
+  transition all $time-short $ease-in-out-std 
+.modal-left-in-enter 
+  transform translateX(40px)
+.modal-left-in-leave-to 
+  transform translateX(40px)
 </style>
 
 

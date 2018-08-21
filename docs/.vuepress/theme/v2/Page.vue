@@ -1,10 +1,11 @@
 <template>
   <div class="page">
     <Content :custom="false" class="article"/>
-    <div class="git-link">
+    <div class="git-link clear-float">
+      <p>如果您有任何建议，可以帮助我们完善这篇文档</p>
       <a target="blank"
         :href="resolveGitLink()">
-        完善这个页面
+        编辑页面
       </a>
     </div>
   </div>
@@ -35,13 +36,23 @@ function resolvePathToMd(path) {
 
 <style lang="stylus">
 @import "styles/config"
+@import "styles/tool"
 .page
   position relative
 .git-link
   margin 80px 0 20px
-  padding-top 40px
+  padding-top 30px
+  padding-bottom 30px
   border-top 1px solid $border-color
+  border-bottom 1px solid $border-color
+  p
+    float left
+    margin 0
+    font-size 14px
+    line-height 30px
+    color $text-black-weak
   a
+    float right
     font-size 14px
     width 120px
     height 32px
