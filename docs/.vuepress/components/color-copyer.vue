@@ -1,6 +1,7 @@
 <template>
-    <div class="colorBox colorBox-in" 
+    <div class="colorBox colorBox-solo" 
     v-if="color2 == null"
+    @click="showAlert()"
     :data-clipboard-text="color"
     :style="{backgroundColor: color}">
         <p class="color-name" :class="this.type === 'dark'? 'dark':'white'">
@@ -13,16 +14,24 @@
     <div :class="['colorBox','gra',type]" 
     v-else-if="color2 !== null"
     :style="gradients">
-        <p class="color-box-color color-name">{{color}} → {{color2}}</p>
-        <p class="color-box-text color-text">{{text}}</p>
+        <p class="color-box-color color-name"
+          :class="this.type === 'dark'? 'dark':'white'"
+          >{{color}} → {{color2}}</p>
+        <p class="color-box-text color-text"
+          :class="this.type === 'dark'? 'dark':'white'"
+          >{{text}}</p>
         <div class="color-1 colorBox-in" 
         :data-clipboard-text="color"
-        :style="{backgroundColor: color}"><p @click="showAlert()">{{color}}</p>
+        :style="{backgroundColor: color}">
+        <p @click="showAlert()"
+          :class="this.type === 'dark'? 'dark':'white'"
+          >{{color}}</p>
         </div>
         <div class="color-2 colorBox-in"  
         :data-clipboard-text="color2"
         :style="{backgroundColor: color2}">
-        <p @click="showAlert()">{{color2}}</p>
+        <p :class="this.type === 'dark'? 'dark':'white'"
+          @click="showAlert()">{{color2}}</p>
         </div>
     </div>
 </template>
@@ -40,7 +49,7 @@ export default {
       default: null
     },
     type: {
-      default: 'dark'
+      default: 'white'
     },
   },
   methods: {
@@ -67,16 +76,23 @@ export default {
 <style lang="stylus">
 @import '../theme/v2/styles/config.styl' 
   .colorBox
+    transition $time-std transform $ease-in-out-std
+    margin 10px 0
     &:hover
       cursor pointer
-    height 20px;
-    margin 0px 0;
-    overflow hidden;
-    padding 15px;
+    &.colorBox-solo:hover
+      transform scale(1.01,1.01)
+    height 20px
+    overflow hidden
+    padding 15px
     p
       margin 0
-    p.dark
+    p.white
       color #fff
+      opacity .85
+    p.dark
+      color #000
+      opacity .85
     p.color-name
       margin 0
       float left
@@ -94,7 +110,7 @@ export default {
       position absolute
       background-color #000
       top 0
-      transition .8s transform $ease-in-out-std
+      transition $time-long transform $ease-in-out-std
       &:hover
         cursor pointer
       p,p:first-child
@@ -106,7 +122,7 @@ export default {
         line-height 100px
         transform translate(-50%,-50%)
         display block
-        transition .4s all $ease-in-out-std
+        transition $time-std all $ease-in-out-std
         &:hover
           background-color #000
     .color-1
@@ -116,7 +132,7 @@ export default {
       right 0
       transform translateX(100%)
     p.color-box-color,p.color-box-text
-      transition .4s all $ease-in-out-std
+      transition $time-std all $ease-in-out-std
       opacity 1
     &:hover
       cursor default

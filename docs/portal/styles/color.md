@@ -35,22 +35,15 @@ sidebarDepth: 0
 
 **辅助色** 是主色的延展，为了更好的展现页面风格做出的和主色互补的颜色。主要对关键内容的衬托和功能的引导。这类颜色主要体现在导航框架、背景底色、描边、或次级操作等场景。
 
-
-::: color #0F1012
-背景、页面头部、底部等处使用
-:::
+<color-copyer color="#0F1012" text="背景、页面头部、底部等处使用" />
 
 **辅助拓展色：**
 
 <div class="wrp">
 
-::: color #1E1E28
-在辅助色的基础上，根据需要搭配使用的辅色拓展色
-:::
+<color-copyer color="#1E1E28" text="在辅助色的基础上，根据需要搭配使用的辅色拓展色" />
+<color-copyer color="#3C3C4D" text="模块标题栏背景、按钮等处使用" />
 
-::: color #3C3C4D
-模块标题栏背景、按钮等处使用
-:::
 
 </div>
 
@@ -62,45 +55,36 @@ sidebarDepth: 0
 
 为了完善页面的设计需求，在一些特殊情况下，小面积出现的点缀色，和主色搭配使用，丰富页面的设计效果，起到强调突显重要信息内容的作用。
 
-:::color #D0021B
-价格、折扣、促销等需要突出提示
-:::
+<color-copyer color="#D0021B" text="价格、折扣、促销等需要突出提示" />
 
-:::color #f5a623
-普通的标签背景辅助色
-:::
+<color-copyer color="#f5a623" text="普通的标签背景辅助色" />
 
 ## 文本色
 
 页面一般常用规范字体颜色。主要为栏目标题、文本内容等。
 
-:::color #000000d9
-标题/重要文本色（85% 透明度）
-:::
+<color-copyer color="rgba(0,0,0,.85)" text="深色标题文字(85% 透明度)" />
 
-:::color #00000099
-一般文本色（60% 透明度）
-:::
+<color-copyer color="rgba(0,0,0,.6)" text="一般文本色（60% 透明度）" />
 
-:::color #00000066
-轻文本色（40% 透明度）
-:::
+<color-copyer color="rgba(0,0,0,.4)" text="轻文本色（40% 透明度）" />
+
+<div style ="padding:1px 10px; background-color:#000;">
+<color-copyer color="rgba(255,255,255,1)" text="深色背景下标题（100% 透明度）" type="dark" />
+<color-copyer color="rgba(255,255,255,.75)" text="深色背景下一般文本（75% 透明度）" type="dark" />
+<color-copyer color="rgba(255,255,255,.5)" text="深色背景下弱文本（50% 透明度）" type="dark" />
+</div>
 
 ## 其他颜色
 
 页面中某一些特定辅助修饰的浅灰色。主要为卡片、表格描边，板块背景色等
 
-:::color-l #f5f5f5
-板块底色
-:::
 
-:::color-l #ebebeb
-卡片描边、表格描边、分割线等颜色
-:::
+<color-copyer color="#f5f5f5" text="板块底色" type="dark"/>
 
-:::color-l #fbfbfb
-表头颜色
-:::
+<color-copyer color="#ebebeb" text="卡片描边、表格描边、分割线等颜色" type="dark"/>
+
+<color-copyer color="#fbfbfb" text="表头颜色" type="dark"/>
 
 ## 拓展的颜色定义
 
@@ -113,40 +97,27 @@ sidebarDepth: 0
 
 :::
 
-<div class="wrp">
+
 
 <color-copyer color="#1BC3FF" text="拓展渐变-紫" color2="#465FFF"  type= "light"/>
 
-</div>
 
-<div class="wrp">
 
 <color-copyer color="#1BC3FF" text="拓展渐变-蓝" color2="#465FFF"  type= "light"/>
 
-</div>
 
-<div class="wrp">
 
 <color-copyer color="#71EFFF" text="拓展渐变-亮蓝" color2="#2CB1FF"  type= "light"/>
 
-</div>
 
-
-<div class="wrp">
 
 <color-copyer color="#8BE934" text="拓展渐变-绿" color2="#41BC0D"  type= "light"/>
 
-</div>
 
-<div class="wrp">
 
 
 <color-copyer color="#FDE705" text="拓展渐变-橙" color2="#FE9201"  type= "light"/>
 
-</div>
-
-<div class="wrp">
 
 <color-copyer color="#FF995F" text="拓展渐变-橘" color2="#FF4C5C"  type= "light"/>
 
-</div>
