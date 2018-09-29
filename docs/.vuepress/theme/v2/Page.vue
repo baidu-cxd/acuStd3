@@ -8,11 +8,14 @@
         编辑页面
       </a>
     </div>
+    <PrevNext/>
   </div>
 </template>
 
 <script>
+import PrevNext from './PrevNext.vue'
 export default {
+  components: { PrevNext },
   name : 'Page',
   methods: {
     resolveGitLink () {

@@ -91,6 +91,80 @@ export function resolveTextByItem (link, nowPage, navObj, basePath) {
   return title
 }
 
+// 解算 prev next 
+
+export function resolvePrevNext (nowPage, themeConfig) {
+  console.log(nowPage)
+  const dataPath = nowPage.split('/')[1] + 'Nav' // 解算出导航栏使用的数据名
+  const navData = themeConfig[dataPath]
+  var result={};
+  console.log(navData);
+
+
+  // 这里有空可以重构下，感觉这两个方法可以合并
+  patJson(navData,result,1,nowPage.split('/')[1]); // 方法步骤一: 拍平数据
+  let newResult = [] // 方法步骤二: 重新排序
+  for (const key in result) {
+    if (result.hasOwnProperty(key)) {
+      const element = result[key];
+      newResult.push(element)
+    }
+  }
+
+
+  // 判断当前页面在哪里
+  let prevNextData = {
+    "length" : newResult.length,
+    "now" : " ",
+    "prev" : { "link" : " " , "text" : " "},
+    "next" : { "link" : " " , "text" : " "},
+  }
+  Object.keys(newResult).forEach(function(key){
+    if (nowPage === newResult[key]){
+      prevNextData.now = Number(key)
+      prevNextData.prev.link = newResult[Number(key) - 1]
+      prevNextData.next.link = newResult[Number(key) + 1]
+      console.log(key,newResult[key]);
+    }
+  });
+  console.log(prevNextData);
+
+  let prevNext = {
+    prev: {
+      text: '上一篇',
+      path: '/portal/'
+    },
+    next: {
+      text: '下一篇',
+      path: '/portal/'
+    },
+  }
+  return prevNext
+}
+
+function patJson(o,resobj,nowItem,nowPage,groupUrl) {
+  var keys = Object.keys(o);
+  keys.forEach(function(item){
+      var v = o[item];
+      if (v === '/'){
+        v = '/'
+      }
+      if(v.children){
+          nowItem = nowItem + 1 
+          groupUrl = v.groupUrl
+          patJson(v.children,resobj,nowItem,nowPage,groupUrl);
+      }else{
+          if (groupUrl){
+            if (v === '/'){
+              v = ''
+            } else {
+              v = v + '.html'
+            }
+            resobj[nowItem + item] =  '/' +  nowPage + '/' + groupUrl + '/' + v;
+          } else {resobj[nowItem + item] =  '/' + nowPage + v;}
+      }
+  })
+}
 
 // 原有 vuepress 函数
 

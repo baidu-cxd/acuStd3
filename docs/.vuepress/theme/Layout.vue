@@ -13,7 +13,6 @@
       v-if="!$page.frontmatter.layout">
       <div class="page-wrp">
         <Page/>
-        <PrevNext/>
       </div>
     </div>
     <Footer/>
@@ -28,12 +27,11 @@ import Home from './v2/Home.vue'
 import Section from './v2/Section.vue'
 import Nav from './v2/Nav.vue'
 import Page from './v2/Page.vue'
-import PrevNext from './v2/PrevNext.vue'
 import Footer from './v2/Footer.vue'
 import { pathToComponentName, resolveSubSidebarItems } from './v2/util'  
 
 export default {
-  components: { Home, Page, PrevNext, Nav, Footer, Section },
+  components: { Home, Page,  Nav, Footer, Section },
   data () {
     return {
       isNavHidden: false
