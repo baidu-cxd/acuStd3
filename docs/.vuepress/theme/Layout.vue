@@ -10,7 +10,8 @@
     <component :is="$page.frontmatter.layout"/>
     <Home v-if="$page.frontmatter.home"/>
     <div class="main-wrp"
-      v-if="!$page.frontmatter.layout">
+      v-if="!$page.frontmatter.layout 
+      & !$page.frontmatter.home">
       <div class="page-wrp">
         <Page/>
       </div>

@@ -102,11 +102,10 @@ export function resolveTextByRealLink (link, realLink, navObj) {
 // 解算 prev next 
 
 export function resolvePrevNext (nowPage, themeConfig, navObj) {
-  // console.log(nowPage)
   const dataPath = nowPage.split('/')[1] + 'Nav' // 解算出导航栏使用的数据名
   const navData = themeConfig[dataPath]
   var result={};
-  // console.log(navData);
+
 
 
   // 这里有空可以重构下，感觉这两个方法可以合并
@@ -138,7 +137,6 @@ export function resolvePrevNext (nowPage, themeConfig, navObj) {
       // console.log(key,newResult[key]);
     }
   });
-  console.log(prevNextData);
   return prevNextData
 }
 
