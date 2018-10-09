@@ -73,6 +73,14 @@ export function resolveLinkByItem (link, nowPage, basePath ) {
 
 export function resolveTextByItem (link, nowPage, navObj, basePath) {
   let realLink = resolveLinkByItem (link, nowPage, basePath ) 
+  // console.log(navObj)
+  const title = resolveTextByRealLink (link, realLink, navObj)
+  return title
+}
+
+// 用完整链接结算出 text 的函数
+
+export function resolveTextByRealLink (link, realLink, navObj) {
   let obj = {};
   navObj.forEach(function (v) {
       obj[v.path] = v
@@ -93,12 +101,12 @@ export function resolveTextByItem (link, nowPage, navObj, basePath) {
 
 // 解算 prev next 
 
-export function resolvePrevNext (nowPage, themeConfig) {
-  console.log(nowPage)
+export function resolvePrevNext (nowPage, themeConfig, navObj) {
+  // console.log(nowPage)
   const dataPath = nowPage.split('/')[1] + 'Nav' // 解算出导航栏使用的数据名
   const navData = themeConfig[dataPath]
   var result={};
-  console.log(navData);
+  // console.log(navData);
 
 
   // 这里有空可以重构下，感觉这两个方法可以合并
@@ -119,27 +127,19 @@ export function resolvePrevNext (nowPage, themeConfig) {
     "prev" : { "link" : " " , "text" : " "},
     "next" : { "link" : " " , "text" : " "},
   }
+  // 获得前后页面的标题和链接
   Object.keys(newResult).forEach(function(key){
     if (nowPage === newResult[key]){
       prevNextData.now = Number(key)
       prevNextData.prev.link = newResult[Number(key) - 1]
+      prevNextData.prev.text = resolveTextByRealLink (" " ,prevNextData.prev.link, navObj)
       prevNextData.next.link = newResult[Number(key) + 1]
-      console.log(key,newResult[key]);
+      prevNextData.next.text = resolveTextByRealLink (" " ,prevNextData.next.link, navObj)
+      // console.log(key,newResult[key]);
     }
   });
   console.log(prevNextData);
-
-  let prevNext = {
-    prev: {
-      text: '上一篇',
-      path: '/portal/'
-    },
-    next: {
-      text: '下一篇',
-      path: '/portal/'
-    },
-  }
-  return prevNext
+  return prevNextData
 }
 
 function patJson(o,resobj,nowItem,nowPage,groupUrl) {
