@@ -117,8 +117,6 @@ export function resolvePrevNext (nowPage, themeConfig, navObj) {
       newResult.push(element)
     }
   }
-
-
   // 判断当前页面在哪里
   let prevNextData = {
     "length" : newResult.length,
@@ -144,12 +142,9 @@ function patJson(o,resobj,nowItem,nowPage,groupUrl) {
   var keys = Object.keys(o);
   keys.forEach(function(item){
       var v = o[item];
-      if (v === '/'){
-        v = '/'
-      }
       if(v.children){
           nowItem = nowItem + 1 
-          groupUrl = v.groupUrl
+          const groupUrl = v.groupUrl
           patJson(v.children,resobj,nowItem,nowPage,groupUrl);
       }else{
           if (groupUrl){
@@ -159,7 +154,13 @@ function patJson(o,resobj,nowItem,nowPage,groupUrl) {
               v = v + '.html'
             }
             resobj[nowItem + item] =  '/' +  nowPage + '/' + groupUrl + '/' + v;
-          } else {resobj[nowItem + item] =  '/' + nowPage + v;}
+          } else {
+            if (v === '/'){
+              resobj[nowItem + item] =  '/' + nowPage + v;
+            } else {
+              resobj[nowItem + item] =  '/' + nowPage + '/' + v + '.html';
+            }
+          }
       }
   })
 }

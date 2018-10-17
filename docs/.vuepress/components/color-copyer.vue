@@ -106,7 +106,7 @@ export default {
     position relative
     .color-1,.color-2
       height 100%
-      width 160px
+      width 50%
       position absolute
       background-color #000
       top 0

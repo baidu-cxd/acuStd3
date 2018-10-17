@@ -11,8 +11,8 @@ portalNavData = [
       children : [
         "/",          // 概述
         "unified",   // 统一性
-        "artistic",   // 美观性
         "intuitive",   // 直观性
+        "artistic",   // 美观性
       ]
     }, 
     {
@@ -27,19 +27,43 @@ portalNavData = [
         "icon",      
         "shadow"
       ]
-    },   
+    }, 
+    {
+      text : "组件",
+      groupUrl : "component",
+      children: [
+        "base", 
+        "form",  
+        "button",    
+        "hyperlink",
+        "table"
+      ]
+    },  
+    {
+      text : "导航",
+      groupUrl : "navgation",
+      children: [
+        "tag",  
+        "sidebar",   
+        "fastguid"  
+      ]
+    },  
     {
       text : "页面",
-      groupUrl : "pages",
+      groupUrl : "page",
       children : [
+        "home",        // 首页
         "product",     // 产品页
         "solution"     // 解决方案页
       ]
     },
+    "marketing",        // 风格
+    "download",         // 下载
     {
       text : "其它",
       groupUrl : "others",
       children : [
+        "dictionaries", // 设计字典
         "designtoken", // designToken
         "cms",         // CMS 管理
         "iconfont",    // Iconfont
