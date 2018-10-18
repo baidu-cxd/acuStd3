@@ -4,7 +4,9 @@
  */
 
 labNavData = [
-    "/" ,         // 概述 README.md
+    "/" ,                   // 概述 README.
+    "line_height" ,         // 行高生成器
+    "color_maker" ,         // 临近颜色生成器
     {
       text : "开发者文档",
       groupUrl : "development",

@@ -8,7 +8,7 @@ author: dz(wangyihan05@baidu.com)
 
 如果现在要创建一个新的规范，需要新建一个规范目录和完成相关的配置，请按下面的流程进行(<mark>以 portal 设计规范的创建为例</mark>)：
 
-## 1. 在文件 `/docs/.vurpress/config/mainNavData.js` 中添加一个数据：
+### 1. 在文件 `/docs/.vurpress/config/mainNavData.js` 中添加一个数据：
 
 ```js
   { 
@@ -17,7 +17,7 @@ author: dz(wangyihan05@baidu.com)
   },
 ```
 
-## 2. 在文件在文件目录 `/docs/.vurpress/config/subNav` 下新建一个新规范的导航文件
+### 2. 在文件在文件目录 `/docs/.vurpress/config/subNav` 下新建一个新规范的导航文件
 
 导航的基本形式：
 
@@ -42,11 +42,11 @@ labNavData = [
 module.exports = labNavData;
 ```
 
-## 3. 在文件在文件目录 `/docs` 下按照导航中设定的 url 建立文件结构和存放 markdown 文件
+### 3. 在文件在文件目录 `/docs` 下按照导航中设定的 url 建立文件结构和存放 markdown 文件
 
 举例说，如果之前注册了一个目录在 `/portal/` 下的导航，那么就在 `/docs` 下建议一个文件夹叫 `portal`
 
-## 4. 注册导航
+### 4. 注册导航
 
 （1）在文件 `/docs/.vurpress/config.js` 中添加刚才增加的导航 js 文件：
 
