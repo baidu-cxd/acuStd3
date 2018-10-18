@@ -5,7 +5,7 @@
 
 marketingNavData = [
     "/" ,         // 概述 README.md
-    "Page",        // 页面
+    "page",        // 页面
     {
       text : "风格",
       groupUrl : "styles",

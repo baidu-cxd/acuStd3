@@ -1,5 +1,5 @@
 <template>
-    <div class="colorBox colorBox-solo" 
+    <div class="color-box color-box-solo" 
     v-if="color2 == null"
     @click="showAlert()"
     :data-clipboard-text="color"
@@ -11,7 +11,7 @@
           {{text}}
         </p>
     </div>
-    <div :class="['colorBox','gra',type]" 
+    <div :class="['color-box','gra',type]" 
     v-else-if="color2 !== null"
     :style="gradients">
         <p class="color-box-color color-name"
@@ -20,14 +20,14 @@
         <p class="color-box-text color-text"
           :class="this.type === 'dark'? 'dark':'white'"
           >{{text}}</p>
-        <div class="color-1 colorBox-in" 
+        <div class="color-1 color-box-in" 
         :data-clipboard-text="color"
         :style="{backgroundColor: color}">
         <p @click="showAlert()"
           :class="this.type === 'dark'? 'dark':'white'"
           >{{color}}</p>
         </div>
-        <div class="color-2 colorBox-in"  
+        <div class="color-2 color-box-in"  
         :data-clipboard-text="color2"
         :style="{backgroundColor: color2}">
         <p :class="this.type === 'dark'? 'dark':'white'"
@@ -59,7 +59,7 @@ export default {
   },
   mounted() {
     import("clipboard").then(cb => {
-      new cb.default(".colorBox-in");
+      new cb.default(".color-box-in");
     });
   },
   computed: {
@@ -75,12 +75,12 @@ export default {
 
 <style lang="stylus">
 @import '../theme/v2/styles/config.styl' 
-  .colorBox
+  .color-box
     transition $time-std transform $ease-in-out-std
     margin 10px 0
     &:hover
       cursor pointer
-    &.colorBox-solo:hover
+    &.color-box-solo:hover
       transform scale(1.01,1.01)
     height 20px
     overflow hidden
@@ -101,7 +101,7 @@ export default {
       margin 0
       float right 
       line-height 20px
-  .colorBox.gra
+  .color-box.gra
     transition .8s all $ease-in-out-std
     position relative
     .color-1,.color-2
@@ -146,5 +146,12 @@ export default {
       p.color-box-text
         transform translateX(-30px)
         opacity 0
+
+// 编组样式
+
+.color-box-wrp 
+  margin 15px 0
+  .color-box
+    margin 0
 </style>
 

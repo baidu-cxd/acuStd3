@@ -9,22 +9,85 @@ consoleNavData = [
       text : "设计原则",
       groupUrl : "principle",
       children : [
-        "wayfinding",    // 界面方向感
-        "simplicity",    // 简约至上
-        "font",          // 字体
-        "element",       // 元素
+        "wayfinding" ,             
+        "simplicity" ,            
+        "consistency" ,          
+        "proximity" ,            
+        "feedback_mechanism"   
       ]
     },
     {
-      text : "设计原则",
-      groupUrl : "principle",
+      text : "风格",
+      groupUrl : "style",
       children : [
-        "wayfinding",    // 界面方向感
-        "simplicity",    // 简约至上的设计
-        "font",          // 字体
-        "element",       // 元素
+        "color" ,     
+        "typography" ,    
+        "icons" ,   
+        "writing" 
       ]
     },
+    {
+      text : "组件",
+      groupUrl : "widget",
+      children : [
+        "button",      
+        "list",     
+        "placeholder",     
+        "introduction",      
+        "chart",      
+        "collection",     
+        "pagination",     
+        "link",      
+        "input",      
+        "switch",      
+        "time",      
+        "stepper",     
+        "upload",      
+        "select",     
+        "radio",      
+        "checkBox",     
+        "dropdown",     
+        "slider",     
+        "search",    
+        "menu",     
+        "tabs",      
+        "steps",     
+        "loading",      
+        "toast",      
+        "modal",     
+        "drawer",      
+        "tips",      
+        "badge",
+        "transfer"     
+      ]
+    },
+    {
+      text : "布局",
+      groupUrl : "layout",
+      children : [
+        "summarize",
+        "console",
+        "introduction",  
+        "overview", 
+        "list_page", 
+        "details",
+        "create",  
+        "picture_preview"
+      ]
+    },
+    {
+      text : "反馈",
+      groupUrl : "feedback",
+      children : [
+        "feedback_review",      
+        "message_prompt",      
+        "process_feedback",      
+        "result_feedback"
+      ]
+    },
+    'check',
+    'download',
+
 ]
 
 module.exports = consoleNavData;
