@@ -14,6 +14,7 @@ const portalNavData = require('./config/subNav/portal.js')
 const marketingNavData = require('./config/subNav/marketing.js')
 const consoleNavData = require('./config/subNav/console.js')
 const labNavData = require('./config/subNav/lab.js')
+const animateNavData = require('./config/subNav/animate.js')
 
 
 module.exports = {
@@ -27,6 +28,7 @@ module.exports = {
       marketingNav: marketingNavData,
       consoleNav: consoleNavData,
       labNav: labNavData,
+      animateNav: animateNavData,
       logo: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxd.svg', 
       logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
       gitHub: 'https://github.com/dingzu/acuStd3/blob/master/docs',
