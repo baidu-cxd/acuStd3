@@ -60,7 +60,7 @@ sidebarDepth: 0
 <div class="color-box-wrp">
 <color-copyer color="#f39000" text="警告色" />
 <color-copyer color="#f7a73f" text="展示/其他特殊情况" />
-<color-copyer color="#fbca8c" text="展示/其他特殊情况" />
+<color-copyer color="#fbca8c" type="dark" text="展示/其他特殊情况" />
 <color-copyer color="#fde7cc" type="dark" text="展示/其他特殊情况" />
 <color-copyer color="#fcf7f1" type="dark" text="底色/展示用色" />
 </div>
