@@ -75,7 +75,7 @@ export default {
 
 <style lang="stylus">
 @import '../theme/v2/styles/config.styl' 
-  .color-box
+.content  .color-box
     transition $time-std transform $ease-in-out-std
     margin 10px 0
     &:hover
