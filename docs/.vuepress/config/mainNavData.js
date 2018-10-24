@@ -5,12 +5,12 @@
 
 const mainNavData = [
   { 
-    "text": "Portal 门户", 
+    "text": "Portal 官网", 
     "link": "/portal/" ,
     "icon": "http://yihan.gz.bcebos.com/icon16.png"
   },
   {
-    "text": "Console 后台",
+    "text": "Console 控制台",
     "link": "/console/",
     "icon": "http://yihan.gz.bcebos.com/icon16.png"
   },

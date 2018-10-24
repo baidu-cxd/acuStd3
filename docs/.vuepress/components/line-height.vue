@@ -68,13 +68,13 @@ export default {
 </script>
 
 <style lang="stylus">
-.line-height
+.article .line-height
   width 100%
   overflow hidden
   border 1px solid #ebebeb
   margin-top 40px
   h3
-    padding-left 40px
+    padding-left 50px
     margin-bottom 0
   .size-item
     box-sizing border-box

@@ -153,5 +153,8 @@ export default {
   margin 15px 0
   .color-box
     margin 0
+.color-box-border
+  .color-box
+    border 1px solid rgba(0,0,0,.1)
 </style>
 

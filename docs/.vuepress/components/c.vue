@@ -100,13 +100,14 @@ export default {
 
 
 .page-c
+  margin 0 2px
   position relative
   &:hover
     cursor pointer
   .color-content
     display inline-block
     position relative
-    padding-left 1.8em
+    padding-left 1.25em
     .color-block
       @extend .v-middle
       display inline-block

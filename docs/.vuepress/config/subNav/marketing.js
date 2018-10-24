@@ -36,8 +36,9 @@ marketingNavData = [
         "special",    // 营销页特殊动画
       ]
     },
-    "mobile",         // 移动端适配
-    "resource",       // 资源
+    "mobile",                // 移动端适配
+    "cloud-market-banner",   // 云市场 banner
+    "resource",              // 资源
 ]
 
 module.exports = marketingNavData;
