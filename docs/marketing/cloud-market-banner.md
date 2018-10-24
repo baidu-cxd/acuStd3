@@ -35,7 +35,7 @@ banner 图形部分处于一个 `500px` × `400px` 的区域内
 
 banner 背景渐变色：
 
-<color-copyer color="#9c4bcc" color2="#5d23c2" text="背景使用的渐变色" />
+<color-copyer color="#8C55AC" color2="#5d23c2" text="背景使用的渐变色" />
 
 ## 3. Banner 文案规范
 

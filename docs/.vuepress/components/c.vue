@@ -80,7 +80,7 @@ export default {
     color #fff
     font-size 12px
     text-align center
-    left 6px
+    left 7.5px
     bottom 100%
     transform translate(-50%,-8px)
     border-radius 2px
