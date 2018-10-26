@@ -7,7 +7,7 @@ sidebarDepth: 0
 
 用户使用产品就是一个和产品发生互动的过程，站在用户的角度去考虑，好的系统要满足如下的场景——操作前用户要了解自己需要做些什么以及相应的规则是什么？操作中要知道自己所处的当前位置以及相应的控件是否已触发？操作后要明确操作是否成功或者失败，以及失败的原因是什么？
 
-百度云console的反馈按照用户与系统发生互动的先后顺序来划分，分别是[信息提示](/console/feedback/message_prompt.html)、[过程反馈](/console/feedback/progress_feedback.html)和[结果反馈](/console/feedback/result_feedback.html)，详见具体章节。
+百度云console的反馈按照用户与系统发生互动的先后顺序来划分，分别是[信息提示](/console/feedback/message_prompt.html)、[过程反馈](/console/feedback/process_feedback.html)和[结果反馈](/console/feedback/result_feedback.html)，详见具体章节。
 
 ## 使用建议
 
