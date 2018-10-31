@@ -43,6 +43,25 @@ author: dz(wangyihan05@baidu.com)
     <color-copyer color="#f5f5f5" text="板块底色" type="dark"/>
 
 
+## 3. Tab
+
+
+<tab> 
+
+### 第一个 tab
+
+第一个 tab 对应的内容
+
+### 第二个 tab
+
+第二个 tab 对应的内容
+
+### 第三个 tab
+
+第三个 tab 对应的内容
+
+</tab>
+
 
 
 

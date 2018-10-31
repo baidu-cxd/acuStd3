@@ -1,5 +1,5 @@
 <template>
-    <div class="color-box color-box-solo" 
+    <div class="color-box color-box-in color-box-solo" 
     v-if="color2 == null"
     @click="showAlert()"
     :data-clipboard-text="color"

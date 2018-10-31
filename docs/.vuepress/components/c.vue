@@ -46,7 +46,6 @@ export default {
     },
     showTip() {
       this.isShowTip = true
-      console.log(this.isShowTip)
     },
     hiddenTip() {
       this.isShowTip = false
