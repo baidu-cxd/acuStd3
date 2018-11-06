@@ -94,11 +94,11 @@ sidebarDepth: 0
 
 ## 示例
 
-列表和其他组件搭配，构成的常规列表（通常列表页表格为通栏样式，布局详见[列表页设计规范](/console/style/list_page.html)）：
+列表和其他组件搭配，构成的常规列表（通常列表页表格为通栏样式，布局详见[列表页设计规范](/console/layout/list_page.html)）：
 
 ![图片](http://baiduyun-guideline.bj.bcebos.com/console/widget/list/list-14@2x.png?process=none)
 
-弹框中列表（弹框中列表尺寸遵循[弹框设计规范](console/widget/modal.html)）：
+弹框中列表（弹框中列表尺寸遵循[弹框设计规范](/console/widget/modal.html)）：
 
 ![图片](http://baiduyun-guideline.bj.bcebos.com/console/widget/list/list-15@2x.png?process=none)
 
