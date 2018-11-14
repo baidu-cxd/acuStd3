@@ -105,7 +105,9 @@ export default {
                 width: 18px;
                 border-radius: 50%;
                 background-color: #4db1ff;
-                vertical-align: middle
+                vertical-align: middle;
+                top: 0;
+                line-height: 21px;
             }
         }
     }
