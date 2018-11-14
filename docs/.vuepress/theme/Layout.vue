@@ -65,6 +65,7 @@ export default {
       return [
         this.isNavHidden? 'nav-hidden' : 'nav-show',
         userPageClass,
+        this.$page.frontmatter.home === true ? 'is-home' : 'not-home',
         this.$page.frontmatter.home ||
         this.$page.frontmatter.nav === false ? 'no-nav' : ' '
       ]
