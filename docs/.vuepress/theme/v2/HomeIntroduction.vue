@@ -43,7 +43,7 @@ export default {
                     img: 'public/intro-animate.png',
                     title: '动效',
                     detail: '在页面中引入动画的主要为了帮助用户理解页面交互形式，提高页面视觉效果，加深用户对页面的印象，降低长时间浏览的枯燥感',
-                    link: '/animate/Summarize.html'
+                    link: '/animate/'
                 }
             ]
         };
