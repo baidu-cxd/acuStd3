@@ -5,17 +5,9 @@
 
 marketingNavData = [
     "/" ,         // 概述 README.md
-    "page",        // 页面
-    {
-      text : "风格",
-      groupUrl : "styles",
-      children : [
-        "color",    // 色彩
-        "layout",   // 布局
-        "font",     // 字体
-        "element",  // 元素
-      ]
-    },
+    "layout",     // 布局
+    "font",       // 字体
+    "style",      // 风格
     {
       text : "组件",
       groupUrl : "component",
@@ -24,7 +16,8 @@ marketingNavData = [
         "navigation",  // 导航
         "button",     // 按钮
         "hyperlink",  // 超链接
-        "modal",      // 模态弹窗
+        "modal",      // 弹窗
+        "tag",        // 角标
       ]
     },
     {
@@ -32,7 +25,6 @@ marketingNavData = [
       groupUrl : "animate",
       children : [
         "/",         // 动画汇总 README.md
-        "base",       // 基础动画
         "special",    // 营销页特殊动画
       ]
     },

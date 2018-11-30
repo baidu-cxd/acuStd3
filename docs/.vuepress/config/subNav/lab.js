@@ -14,7 +14,8 @@ labNavData = [
         "config",   // 基本配置
         "markdown", // Markdown 插件和语法开发
       ]
-    }
+    },
+    "img_bucket" ,         // 图标库
 ]
 
 module.exports = labNavData;

@@ -27,7 +27,7 @@
             </div>
         </div>
         <!-- logo -->
-        <img :src="$bosLink('public/cxd.svg')" alt="cxd" class="logo">
+        <img :src="$bosLink('public/cxd·guide.svg')" alt="cxd" class="logo">
         <!-- 文字介绍 -->
         <div class="warp" :style="warpStyle">
             <h1 class="title">{{ $page.frontmatter.mainText}}</h1>
