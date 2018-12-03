@@ -7,7 +7,7 @@ edition: v2
 
 # CXD · 图库
 
-[CXD·图库](http://img.yunshe.design) 是百度云团队的图片资源管理网站。现有 3 个图片库：
+[CXD·图库](http://img.yunshe.design) 是百度云团队的图片资源管理网站。
 
 [[toc]]
 
@@ -55,5 +55,30 @@ CXD·图库现有 3 个系列:
 ::: tip 注意
 
 当前仅支持搜索西文（产品缩写名或者拼音）
+
+:::
+
+
+
+### 相关资源下载
+
+提供一个方便处理图标反白效果的插件
+
+<div class="download">
+
+<!--这里写控件库链接-->
+
+[图标自动反白处理插件下载](http://baiduyun-guideline.cdn.bcebos.com/icon-burket/图标库处理.atn)
+
+<!--这里写版本-->
+
+Photoshop(78k)
+
+</div>
+
+::: tip 使用说明
+
+一倍图重命名后缀为 `@w.png`
+二倍图重命名后缀为 `w.png`
 
 :::
