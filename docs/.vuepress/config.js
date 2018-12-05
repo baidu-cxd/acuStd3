@@ -30,7 +30,7 @@ module.exports = {
       labNav: labNavData,
       animateNav: animateNavData,
       logo: 'http://baiduyun-guideline.cdn.bcebos.com/public/cxd·guide.svg', 
-      logoWhite: 'http://baiduyun-guideline.bj.bcebos.com/public%2Fcxdw.svg', // logo 反白稿
+      logoWhite: 'http://baiduyun-guideline.cdn.bcebos.com/public/cxd·guide.svg', // logo 反白稿
       gitHub: 'https://github.com/dingzu/acuStd3/blob/master/docs',
       favicon: ' ',
     },
