@@ -22,6 +22,9 @@
 |12 |W-基础-007-B1| 共 1 个问题|
 |13 |W-基础-003-A | 共 2 个问题|
 |14 |W-基础-002   | 共 2 个问题|
+|15 |W-通用-011号-A1   | 共 1 个问题|
+|16 |W-通用-010号-A1   | 共 1 个问题|
+|17 |W-通用-009号-B1   | 共 2 个问题|
 
 ## 1 W-基础-010-B
 
@@ -69,7 +72,9 @@ transition: .4s box-shadow @ease-in-out-std
 
 **1.4 BUG** 卡片内 `.parameter` 类间距错误
 
+<div class= "nowpage-r">
 ![img](http://baiduyun-guideline.cdn.bcebos.com/test/Snip20181205_40.png)
+</div>
 
 **1.5 BUG** 如果有 5 项相关参数，卡片的高度不正确
 
@@ -109,7 +114,9 @@ transition: .4s box-shadow @ease-in-out-std
 
 **1.6 优化：** 默认文本删除 “起” 字，容易误导，渲染出的实际页面会有 2 个 起字
 
+<div class= "nowpage-r">
 ![img](http://baiduyun-guideline.cdn.bcebos.com/test/Snip20181205_39.png)
+</div>
 
 
 ## 2 W-基础-009
@@ -261,7 +268,7 @@ hover 颜色 #209BFD
 
 tab ，同上
 
-# 11 W-基础-008-A1
+## 11 W-基础-008-A1
 
 **11.1 BUG** 图片宽度不对
 
@@ -273,7 +280,7 @@ tab ，同上
 **11.2** 统一一下 shadow 缓动函数
 同 1.1
 
-# 12 W-基础-007-B1
+## 12 W-基础-007-B1
 
 **12.1 BUG** 详细文案的左右宽度不对
 
@@ -315,8 +322,35 @@ tab ，同上
 
 ```
 
+## 15 W-通用-011号-A1
+
+**15.1** 统一缓动函数即可
+
+## 16 W-通用-010号-A1 
+
+**16.1** 统一缓动函数即可
+
+## 17 W-通用-009号-B1
+
+**17.1** 统一缓动函数
+
+**17.2 BUG** 图片尺寸问题
+
+这里的图片是 60px 而不是 32px + 间距
+
+```less
+
+[ui-type="V5G009B"] .svg {
+    background-size: 64px 64px;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+}
+
+```
+
 <style>
-  .article img {
+  .nowpage-r .article img {
      width:300px;
   }
 </style>
