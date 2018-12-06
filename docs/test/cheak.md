@@ -73,7 +73,9 @@ transition: .4s box-shadow @ease-in-out-std
 **1.4 BUG** 卡片内 `.parameter` 类间距错误
 
 <div class= "nowpage-r">
+
 ![img](http://baiduyun-guideline.cdn.bcebos.com/test/Snip20181205_40.png)
+
 </div>
 
 **1.5 BUG** 如果有 5 项相关参数，卡片的高度不正确
@@ -115,7 +117,9 @@ transition: .4s box-shadow @ease-in-out-std
 **1.6 优化：** 默认文本删除 “起” 字，容易误导，渲染出的实际页面会有 2 个 起字
 
 <div class= "nowpage-r">
+
 ![img](http://baiduyun-guideline.cdn.bcebos.com/test/Snip20181205_39.png)
+
 </div>
 
 
@@ -350,7 +354,7 @@ tab ，同上
 ```
 
 <style>
-  .nowpage-r .article img {
+  .article  .nowpage-r img {
      width:300px;
   }
 </style>

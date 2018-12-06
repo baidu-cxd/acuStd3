@@ -5,6 +5,7 @@
 
 testNavData = [
     "cheak" ,                   // 概述 README.
+    "cheak-mobile" ,                   // 概述 README.
 ]
 
 module.exports = testNavData;
