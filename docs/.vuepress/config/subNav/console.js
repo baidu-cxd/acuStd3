@@ -86,8 +86,8 @@ consoleNavData = [
       ]
     },
     'check',
-    'download',
-
+    'external-link-products',
+    'download'
 ]
 
 module.exports = consoleNavData;

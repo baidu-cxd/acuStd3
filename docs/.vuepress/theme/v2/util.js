@@ -106,8 +106,6 @@ export function resolvePrevNext (nowPage, themeConfig, navObj) {
   const navData = themeConfig[dataPath]
   var result={};
 
-
-
   // 这里有空可以重构下，感觉这两个方法可以合并
   patJson(navData,result,1,nowPage.split('/')[1]); // 方法步骤一: 拍平数据
   let newResult = [] // 方法步骤二: 重新排序
@@ -127,12 +125,12 @@ export function resolvePrevNext (nowPage, themeConfig, navObj) {
   // 获得前后页面的标题和链接
   Object.keys(newResult).forEach(function(key){
     if (nowPage === newResult[key]){
+      console.log(prevNextData)
       prevNextData.now = Number(key)
       prevNextData.prev.link = newResult[Number(key) - 1]
       prevNextData.prev.text = resolveTextByRealLink (" " ,prevNextData.prev.link, navObj)
       prevNextData.next.link = newResult[Number(key) + 1]
       prevNextData.next.text = resolveTextByRealLink (" " ,prevNextData.next.link, navObj)
-      // console.log(key,newResult[key]);
     }
   });
   return prevNextData
