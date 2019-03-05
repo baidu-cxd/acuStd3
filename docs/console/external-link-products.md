@@ -5,6 +5,8 @@ sidebarDepth: 0
 
 # 外链产品设计规范
 
+[[toc]]
+
 ## 适用范围
 
 本规范适用范围：百度云控制台主导航点击跳转到外部的产品，或不上云但对云部分公共功能进行复用型产品。（统一简称：外链产品）
@@ -13,9 +15,12 @@ sidebarDepth: 0
 
 ## 规则
 
+<div id="img-wrp">
+
 ![图片](https://baiduyun-guideline.bj.bcebos.com/console/external-link-products/1_2x.png)
 
-[[toc]]
+</div>
+
 
 ## 产品不上云，但使用云的账号体系及公共功能
 
@@ -39,10 +44,10 @@ sidebarDepth: 0
 
 因产品入口位于百度云产品导航，整体风格建议与百度云相近，具体要求如下：
 
-1.点击控制台导航内产品名称，<mark>新开浏览器页签</mark>，展示产品内容。
-2.<mark>支持跳转回百度云</mark>（详见下方说明图）。
-3.产品框架要采用与百度云相同的左右结构。内容风格参考[百度云console规范](http://yunshe.design/console/outline/Outline.html)
-4.产品logo/名称位置：（详见说明图）提供AB方案，由产品方自主选择。
+1. 点击控制台导航内产品名称，<mark>新开浏览器页签</mark>，展示产品内容。
+2. <mark>支持跳转回百度云</mark>（详见下方说明图）。
+3. 产品框架要采用与百度云相同的左右结构。内容风格参考[百度云console规范](http://yunshe.design/console/)
+4. 产品logo/名称位置：（详见说明图）提供AB方案，由产品方自主选择。
 
 #### 参考方案A：产品名在百度云logo右侧
 
@@ -69,3 +74,10 @@ sidebarDepth: 0
 <mark>问题2：导航内容与百度云控制台其他产品不一致</mark>
 
 ![图片](https://baiduyun-guideline.bj.bcebos.com/console/external-link-products/9_2x.png)
+
+
+<style>
+  #img-wrp img {
+      max-width: 608px;
+  }
+</style>

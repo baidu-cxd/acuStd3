@@ -45,7 +45,7 @@ consoleNavData = [
         "upload",      
         "select",     
         "radio",      
-        "checkBox",     
+        "checkbox",     
         "dropdown",     
         "slider",     
         "search",    
