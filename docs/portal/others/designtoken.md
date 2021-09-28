@@ -6,8 +6,6 @@ edition: v2
 
 # Design Token
 
-随便新加几个字
-
 Design Token 是一个设计前端协作的工具，是为了提高页面样式的规范性和统一性和后期修改的灵活性
 
 ::: more :::
